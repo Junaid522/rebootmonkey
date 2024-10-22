@@ -1,29 +1,34 @@
 # RebootMonkey
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.0-next.0.
+## Angular Server-Side Rendering (SSR) Web Application
 
-## Development server
+## Project Description:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+RebootMonkey is a web-based platform designed for customers to rent servers, rack space, switches, and network services. The application provides a user-friendly interface for customers to browse and select server configurations, manage their rentals, and access network services.
 
-## Code scaffolding
+## Key Features:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Server Rental: Customers can browse and rent servers, rack space, and switches
+- Configuration Management: Users can manage server configurations, including upgrades and downgrades
+- Network Services: Customers can access network services, such as IP management and bandwidth monitoring
+- Customer Dashboard: Users can view rental details, invoices, and payment history
+- Admin Panel: Administrators can manage customer accounts, server inventory, and network resources
 
-## Build
+## Technical Details:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Built using Angular 14+ with Server-Side Rendering (SSR) for improved SEO and performance
+- Utilizes a RESTful API for data exchange between client and server
+- Integrated with payment gateways for secure transactions
+- Deployed on [insert deployment environment, e.g., AWS, Google Cloud]
 
-## Running unit tests
+## Goals:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Provide an intuitive and seamless customer experience for server rental and management
+- Offer scalable and reliable server solutions for businesses
+- Streamline customer engagement and support processes
 
-## Running end-to-end tests
+## Target Audience:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-# new line
+- Businesses requiring server infrastructure for their operations
+- IT professionals and system administrators seeking flexible server solutions
+- Individuals requiring reliable and secure server rentals for personal projects.
