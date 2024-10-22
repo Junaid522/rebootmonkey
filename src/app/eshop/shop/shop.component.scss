@@ -1,0 +1,26 @@
+.holder {
+    padding: 30px;
+    background-color: #121212;
+}
+table tbody tr {
+    border: 1px solid #fae200;
+    border-radius: 9px;
+    text-align: center;
+    margin: 5px 0;
+    background: transparent;
+    transition: background 0.2s ease-in-out;
+}
+
+table {
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+}
+table tbody tr:nth-child(odd) {
+    height: 21px;
+    border: none;
+}
+table tbody tr:nth-child(even):hover {
+    background: #f0de0036;
+}

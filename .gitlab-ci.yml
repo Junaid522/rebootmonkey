@@ -1,0 +1,64 @@
+stages:
+  - build
+  - remove
+  - copy
+  - deploy
+
+build:
+  stage: build
+  script:
+    - npm install
+    - npm run buildssr
+  artifacts:
+    paths:
+      - dist
+
+remove_dev:
+  stage: remove
+  script:
+    - ssh ansible@dev.rebootmonkey.com "sudo systemctl stop site-rm-dev"
+    - ssh ansible@dev.rebootmonkey.com "rm -rf /home/ansible/projects/dev-rm/dist/*"
+    - sleep 5
+  only:
+    - develop
+
+copy_dev:
+  stage: copy
+  script:
+    - scp -r dist/* ansible@dev.rebootmonkey.com:/home/ansible/projects/dev-rm/dist
+  dependencies:
+    - build
+  only:
+    - develop
+
+deploy_dev:
+  stage: deploy
+  script:
+    - ssh ansible@dev.rebootmonkey.com "sudo systemctl start site-rm-dev"
+  only:
+    - develop
+
+remove:
+  stage: remove
+  script:
+    - ssh ansible@dev.rebootmonkey.com "rm -rf /home/ansible/projects/rm-fe/dist/*"
+    - sleep 5
+  only:
+    - main
+
+copy:
+  stage: copy
+  script:
+    - scp -r dist/* ansible@dev.rebootmonkey.com:/home/ansible/projects/rm-fe/dist
+  dependencies:
+    - build
+  only:
+    - main
+
+deploy:
+  stage: deploy
+  script:
+    - ssh ansible@dev.rebootmonkey.com "pm2 restart 0"
+  only:
+    - main
+

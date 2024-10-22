@@ -1,0 +1,75 @@
+<div>
+  <div class="contact container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h5 class="underlined">Expert Consultation</h5>
+          <h2>
+            Let’s Talk to Discuss Your
+            <span class="yellow"> Data Center Management</span> Needs
+          </h2>
+          <p>
+            Reach out to us, allowing our data center specialists to assess your
+            current infrastructure and plan customized solutions or services.
+            We’ll engage in a Q&A session for clarity and provide a complete
+            roadmap for implementation based on your unique needs. This is your
+            cue to walk on a streamlined path to enhanced data center
+            management.
+          </p>
+
+        </div>
+        <div class="col-md-5 contct-form">
+          <form
+            (submit)="submitData()"
+            [formGroup]="contactUsForm"
+          >
+            <h2 class="form-title">Contact Us</h2>
+            
+            <div class="input-container">
+              <label for="name"> Full Name </label>
+              <input name="name" id="name" formControlName="name" />
+            </div>
+            <div class="input-container">
+              <label for="email"> Email </label>
+              <input formControlName="email" id="email" type="email" />
+            </div>
+            <div class="input-container intl-phone">
+              <label> Phone </label>
+              <input type="text" name="phone" #phone formControlName="phone" />
+            </div>
+            <!-- <div class="input-container">
+              <label for="service"> Service </label>
+              <select id="service" formControlName="service">
+                <option *ngFor="let item of services" [value]="item.title">
+                  {{ item.title }}
+                </option> -->
+                <!-- <option *ngFor="let item of products" [value]="item.title">
+                  {{ item.title }}
+                </option> --> 
+                <!-- <option [value]="'Hiring'">Hiring</option>
+              </select>
+            </div> -->
+            <div class="input-container">
+              <label for="message"> Message </label>
+              <textarea
+                id="message"
+                name="message"
+                formControlName="message"
+              ></textarea>
+            </div>
+            <div>
+              <re-captcha
+              #captchaRef
+              (resolved)="captchaResolved()"
+              formControlName="recaptchaReactive"
+            ></re-captcha>
+              <button type="submit" class="btn-primary">
+                {{ embeded ? "Send a message" : "Submit" }}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

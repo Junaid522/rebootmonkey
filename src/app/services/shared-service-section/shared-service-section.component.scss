@@ -1,0 +1,46 @@
+@import "../../../variables.scss";
+
+.row {
+    justify-content: center;
+}
+.col-md-12 {
+    margin-top: 100px;
+    text-align: center;
+}
+h2 {
+    margin-bottom: 30px;
+}
+hr {
+    border-color: $primaryColor;
+    border-width: 2px;
+    opacity: 1;
+    margin: 100px 0;
+}
+.expectation {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+    img {
+        width: 50px;
+        height: auto;
+        padding-right: 20px;
+        margin-top: -18px;
+    }
+    p {
+        margin: 0;
+        line-height: 1;
+        font-size: 25px;
+    }
+}
+.btns {
+    text-align: right;
+}
+.btn-primary {
+    margin-left: 30px;
+    margin-top: 30px;
+    &.outlined {
+        color: #fff !important;
+        border: 1px solid;
+        background-color: transparent;
+    }
+}

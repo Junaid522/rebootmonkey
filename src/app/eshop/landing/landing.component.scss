@@ -1,0 +1,36 @@
+@import "../../../variables.scss";
+
+.gradient {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    color: $black;
+    background: linear-gradient(
+        to right, 
+        $primaryColor,
+        $primaryColor 60%,
+        transparent 40%,
+        transparent
+      );
+      font-weight: bold;
+      img {
+        height: 270px;
+        width: auto;
+      }
+      h1 {
+        color: $black;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+      a {
+        color: $primaryColor !important;
+        background: $black;
+        margin-bottom: 30px;
+      }
+}
+
+
+@media (max-width: 768px) {
+    .gradient {
+        background: $primaryColor
+    }
+}

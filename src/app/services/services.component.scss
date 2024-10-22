@@ -1,0 +1,35 @@
+@import "../../variables.scss";
+
+h2 {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 40px;
+}
+p {
+    text-align: center;
+    font-size: 18px;
+}
+.filters {
+    text-align: center;
+    a {
+        margin: 20px 15px 0;
+    }
+}
+.btn-primary {
+    border: 1px solid $primaryColor;
+}
+a.btn-primary.not-active {
+    background: transparent;
+    color: #fff !important;
+    border: 1px solid;
+}
+// .service-details {
+//     margin-top: 60px;
+// }
+.service-details {
+    background-image: url(../../assets/servicesbg.webp);
+    background-size: auto;
+    background-position-y: -80px;
+    background-position-x: right;
+    background-repeat: no-repeat;
+}

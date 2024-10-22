@@ -1,0 +1,46 @@
+<div class="container-fluid yellow-bg">
+    <rm-logo-particles class="location-particles" [logoCount]="56"></rm-logo-particles> 
+
+    <div class="container">
+        <nav class="beardcumb"
+            style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+            aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
+                <li class="breadcrumb-item"><a [routerLink]="['/about-us']">About us</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Our locations</li>
+            </ol>
+        </nav>
+        <div class="section-header row">
+            <div class="col-lg-8">
+                <div>
+                    <h1>
+                        Our locations
+                    </h1>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <img class="header-img" src="../../../assets/locations.webp" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid locations-holder">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <br/>
+                <div *ngFor="let country of countries; let i = index" class="country">
+                    <strong class="yellow">{{i+1}}-{{country.title}}</strong>
+                    <br/>
+                    <div *ngFor="let city of country.cities" class="cities">
+                        {{city.title}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+</div>

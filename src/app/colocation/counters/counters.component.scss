@@ -1,0 +1,13 @@
+@import "../../../variables.scss";
+
+.container {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 30px;
+}
+.counter {
+    padding-top: 30px;
+    text-align: center;
+    p {
+        color: $primaryColor;
+    }
+}

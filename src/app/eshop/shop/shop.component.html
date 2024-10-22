@@ -1,0 +1,59 @@
+<div class="holder">
+    <div class="row">
+        <div class="col-md-2">
+            <rm-filters (filtersChanges)="filter($event)"></rm-filters>
+        </div>
+        <div class="col-md-10">
+            <table>
+                <thead>
+                    <tr>
+                        <th>{{type}} UNITS</th>
+                        <ng-container *ngFor="let item of (data$ | async); let i = index">
+                            <ng-container *ngFor="let option of item?.options">
+                                <th *ngIf="i === 0 && option.option_values.length === 1">
+                                    {{option.name}}
+                                </th>
+                            </ng-container>
+                        </ng-container>
+                        <!-- <th>BANDWIDTH</th> -->
+                        <th>PRICE</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody *ngIf="data$">
+                    <ng-container *ngFor="let item of data$ | async; let i = index">
+                        <tr></tr>
+                        <tr>
+                            <td>{{item.name}}</td>
+                            <ng-container *ngFor="let option of item.options">
+                                <th *ngIf="option.option_values.length === 1">
+                                    {{option.option_values[0].name}}
+                                </th>
+                            </ng-container>
+                            <!-- <td>From<br />
+                                {{item.bandwidth}}<br />
+                                UNMETERED
+                            </td> -->
+                            <td>€{{item.price}}</td>
+                            <td>
+                                <a class="btn-primary outlined" [routerLink]="['configure']" [queryParams]="{id: item.id, tab}">
+                                    Configure
+                                </a>
+                            </td>
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="text-center">
+        <br />
+        <br />
+        <h2 style="color: #fff">
+            Get started today!
+        </h2>
+        <a (click)="openContactUs()" class="btn-primary outlined">
+            Contact Us
+        </a>
+    </div>
+</div>

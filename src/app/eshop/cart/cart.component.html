@@ -1,0 +1,172 @@
+<div class="holder">
+    <rm-landing [title]="'Cart'"></rm-landing>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-lg-9">
+
+                <nz-tabset [nzSelectedIndex]="activeTab">
+                    <nz-tab nzTitle='Order Summary'>
+                        <div class="items">
+                            <div class="item row" *ngFor="let item of items">
+                                <div class="col-lg-4">
+                                    <h4>
+                                        {{item.name}}
+                                    </h4>
+                                    <p>
+                                        Delivery time: 5-15 business days<br />
+                                        <!-- Data center: New York City (NYC-01)<br />
+                                        Contract Term: 12 months -->
+                                    </p>
+                                </div>
+                                <div class="col-lg-4">
+                                    <h4>
+                                        Recurring Charge
+                                    </h4>
+                                    <div>
+                                        <h5>€{{(item.price * item.count)}}<small>.00</small></h5> /month<br />
+                                        1 month billing term<br />
+                                        Setup cost <h5>€1,190.00</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <p>
+                                                Qty
+                                            </p>
+                                            <input type="number" min="1" (change)="countChange()" [(ngModel)]="item.count" />
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <h2>
+                                                Total
+                                            </h2>
+                                            <h2 style="font-size: 30px;">
+                                                €{{(item.price * item.count) + item.setupPrice}}<small>.00</small>
+                                            </h2>
+                                            <small>
+                                                Incl. taxes
+                                            </small><br />
+                                            <!-- <button class="btn-primary" (click)="remove(item.id)">
+                                                Remove <i class="fa fa-trash"></i>
+                                            </button>
+                                            <button class="btn-primary">
+                                                Edit <i class="fa fa-edit"></i>
+                                            </button> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nz-tab>
+                    <nz-tab nzTitle="User Details" *ngIf="(loginState$ | async) === false">
+                        <div class="row account-btns">
+                            <div class="col-lg-6">
+                                    <div class="col">
+                                        <strong style="font-size: 24px;">
+                                            Returning customer
+                                        </strong>
+                                        <br/>
+                                        <p>
+                                            If you already have a <strong>Reboot Monkey</strong> account click below to log in.
+                                        </p>
+                                        <br/>
+                                        <a class="btn-primary outlined" [routerLink]="['/account/login']" [queryParams]="{returnUrl: '/shop/cart'}">
+                                            Log in
+                                        </a>
+                                    </div>
+                            </div>
+                            <div class="col-lg-6">
+                                    <div class="col">
+                                        <strong style="font-size: 24px;">
+                                            Don’t have an account?
+                                        </strong>
+                                        <br/>
+                                        <p>
+                                            No problem. Click below to register now and then continue with the checkout process.
+                                        </p>
+                                        <br/>
+                                        <a class="btn-primary outlined" [routerLink]="['/account/register']" [queryParams]="{returnUrl: '/shop/cart'}">
+                                            Register
+                                        </a>
+                                </div>
+                            </div>
+                        </div>
+                    </nz-tab>
+                    <nz-tab nzTitle="Payment" [nzDisabled]="(loginState$ | async) === false">
+                        <div class="text-center center-payment">
+                            <button class="pay" (click)="stripe()">
+                                <div>
+                                    Checkout with Stripe
+                                </div>
+                                <div class="no-border">
+                                    {{total}}$
+                                </div>
+                            </button>
+                        </div>
+                    </nz-tab>
+                    <nz-tab nzTitle="Confirmation" [nzDisabled]="successfulPayment === undefined">
+                        <div class="text-center">
+                            <div *ngIf="successfulPayment">
+                                <h2 class="success-text">
+                                    Success !
+                                </h2>
+                                <h3>
+                                    Your order is placed !
+                                </h3>
+                                <br/>
+                                <img src="../../../assets/monkeys.webp" class="success-monkeys"/>
+                            </div>
+                            <div *ngIf="!successfulPayment" style="color: red">
+                                <h2 class="success-text">
+                                    Failed !
+                                </h2>
+                                <h3>
+                                    Payment Failed
+                                </h3>
+                            </div>
+                        </div>
+                    </nz-tab>
+                </nz-tabset>
+            </div>
+            <div class="col-lg-3">
+                <div class="summary">
+                    <p class="big">
+                        Order Summary
+                    </p>
+                    <hr />
+                    <div *ngFor="let item of items">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <strong>
+                                    {{item.count}}
+                                </strong> {{item.name}}
+                            </div>
+                            <div class="col-lg-6">
+                                <strong>
+                                    €{{(item.price * item.count) + item.setupPrice}}<small>.00</small>
+                                </strong> <br />
+                                Incl. taxes
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="summary-blk">
+                    <p class="big">
+                        Order Total
+                    </p>
+                    <h2>€{{total}}<small>.00</small></h2> Incl. taxes
+                    <br />
+                    <a class="nav-link btn-primary outlined order-btn" routerLinkActive="active" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false" (click)="activeTab = 1">
+                        Checkout
+                    </a>
+                    <hr/>
+                    <button class="btn-primary" (click)="emptyCart()">
+                        Empty Cart <i class="fa fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

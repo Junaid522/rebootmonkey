@@ -1,0 +1,6 @@
+<!-- Display logo at random positions -->
+<div class="logo-particles">
+    <div *ngFor="let position of logoPositions" class="logo" [style.top]="position.top" [style.left]="position.left" [style.opacity]="position.opacity">
+        <img [src]="logoUrl" alt="Logo">
+      </div>          
+</div>

@@ -1,0 +1,19 @@
+<div class="shadow" (click)="close()" *ngIf="state"></div>
+<div class="side-container" [ngClass]="{open: state}">
+    <i class="fa fa-times" (click)="close()"></i>
+    <ul>
+        <li *ngFor="let item of menu">
+            <a aria-current="page" [routerLink]="item.href" [routerLinkActiveOptions]="{exact: true}"
+            *ngIf="item.type === 'link'"
+                routerLinkActive="active">{{item.title}}</a>
+                <a href="{{item.href}}" target="_blank"
+                *ngIf="item.type === 'e-link'" routerLinkActive="active" role="button">
+                    {{item.title}}
+                </a>
+                <ul *ngIf="item.children">
+                    <li *ngFor="let c of item.children"><a [routerLink]="c.href"
+                            [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">{{c.title}}</a></li>
+                </ul>
+        </li>
+    </ul>
+</div>

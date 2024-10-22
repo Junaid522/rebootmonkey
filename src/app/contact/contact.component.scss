@@ -1,0 +1,242 @@
+@import "../../variables.scss";
+
+.contact {
+  padding: 30px 0;
+
+  p {
+    color: $gray-text;
+  }
+}
+.row {
+  align-items: center;
+  justify-content: space-between;
+
+}
+// Partners
+
+.yellow-bg {
+  background: #121212;
+}
+
+
+@media (max-width: 767px) {
+  .partner-holder {
+    width: 100px;
+  }
+
+  .partners {
+    height: 6rem !important;
+  }
+
+  .resp {
+    max-width: 100% !important;
+  }
+
+  .counter {
+    margin-bottom: 10px !important;
+    margin-left: unset !important;
+    margin-right: unset !important;
+    // border-right: 1px solid white !important;
+  }
+
+  .numbers {
+    display: unset;
+    justify-content: center;
+    // margin-top: 2.5%;
+  }
+
+  .heading {
+    font-size: 2rem !important;
+  }
+
+
+  .para {
+    font-size: 1rem !important;
+  }
+
+  .icon {
+    max-width: 100% !important;
+  }
+
+  .provide-para p {
+    font-size: 15px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  ._ngcontent-serverapp-c132 {
+    width: 370% !important;
+  }
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.iamge-div-for {
+  position: relative !important;
+}
+
+.top-section-text {
+  max-width: 75%;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $primaryColor;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: $primaryColor;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: $primaryColor;
+}
+
+.container.old:not(.embeded) {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.container.old.embeded {
+  form {
+    margin-top: 0 !important;
+  }
+}
+form {
+  margin-top: 150px;
+  input,
+  textarea,
+  select {
+    border: none;
+    border-bottom: 2px solid $primaryColor;
+    color: $primaryColor;
+    background: $black;
+    display: block;
+    width: 100%;
+  }
+  textarea {
+    border: 1px solid $primaryColor;
+    min-height: 160px;
+  }
+  input,
+  select {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .input-holder {
+    position: relative;
+    &::before {
+      content: "*";
+      position: absolute;
+      top: 0px;
+      left: 5px;
+      color: $primaryColor;
+    }
+  }
+}
+
+form {
+  margin-top: 60px;
+  border-radius: 5px;
+  // padding: 10px;
+  label {
+    color: #434343;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  input,
+  textarea,
+  select {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #434343;
+    margin: 0;
+    &:focus {
+      border: 1px solid $primaryColor;
+      outline: 1px solid $primaryColor;
+    }
+  }
+  .input-container {
+    margin-bottom: 5px;
+  }
+}
+.col-lg-12 {
+  form {
+    margin: 0;
+  }
+}
+
+
+::ng-deep .intl-phone .iti {
+  position: relative;
+  display: block !important;
+}
+::ng-deep .intl-phone .iti--allow-dropdown input,
+::ng-deep .intl-phone .iti--allow-dropdown input[type="text"],
+::ng-deep .intl-phone .iti--allow-dropdown input[type="tel"],
+::ng-deep .intl-phone .iti--separate-dial-code input,
+::ng-deep .intl-phone .iti--separate-dial-code input[type="text"],
+::ng-deep .intl-phone .iti--separate-dial-code input[type="tel"] {
+  padding-right: 6px !important;
+  padding-left: 52px !important;
+  margin-left: 0 !important;
+}
+::ng-deep .intl-phone .iti__country-name {
+  color: #333;
+}
+::ng-deep .intl-phone .iti__arrow {
+  border-top-color: #fff !important;
+}
+::ng-deep .intl-phone ::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #777;
+}
+::ng-deep .intl-phone :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #777;
+  opacity: 1;
+}
+::ng-deep .intl-phone ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #777;
+  opacity: 1;
+}
+::ng-deep .intl-phone :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #777;
+}
+
+.contact.container-fluid h2 {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 750;
+  line-height: 145.2%;
+  margin-bottom: 24px;
+}
+h2.form-title {
+  font-weight: 400 !important;
+}
+.contact.container-fluid p {
+  font-size: 28px;
+  width: 780px;
+}
+.contct-form {
+  width: 441px;
+}
+
+@media (max-width: 1000px) {
+
+.contact.container-fluid p {
+  width: 100% !important;
+}
+.contact.container-fluid p {
+  font-size: 14px;
+}
+}

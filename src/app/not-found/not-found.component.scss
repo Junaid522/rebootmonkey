@@ -1,0 +1,22 @@
+.content-bg {
+    background-image: url(../../assets/homebg.webp);
+    background-size: cover;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    user-select: none;
+    pointer-events: none;
+    max-width: 100%;
+}

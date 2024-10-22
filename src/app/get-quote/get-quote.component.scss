@@ -1,0 +1,118 @@
+@import "../../variables.scss";
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $primaryColor;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $primaryColor;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: $primaryColor;
+  }
+
+.container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+form {
+    margin-top: 150px;
+    input, textarea {
+        border: none;
+        border-bottom: 2px solid $primaryColor;
+        color: $primaryColor;
+        background: $black;
+        display: block;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    textarea {
+        border: 1px solid $primaryColor;
+        min-height: 160px;
+    }
+    input {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .input-holder {
+        position: relative;
+        &::before {
+            content: "*";
+            position: absolute;
+            top: 0px;
+            left: 5px;
+            color: $primaryColor;
+        }
+    }
+}
+
+button {
+    color: $primaryColor;
+    background: transparent;
+    width: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+    float: right;
+    border: none;
+    img {
+        width: 25px;
+        height: auto;
+        position: relative;
+    }
+    &:hover img {
+        animation: arrowHover 0.4s ease-in-out infinite;
+    }
+}
+
+.contact-footer {
+    margin-top: 50px;
+    a {
+        text-decoration: none;
+    }
+}
+
+.social-media-link {
+    color: $black;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin-right: 15px;
+    background-color: $primaryColor;
+    text-align: center;
+    padding-top: 8px;
+    border-radius: 100%;
+    margin-bottom: 10px;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+@keyframes arrowHover {
+    from {left: 0}
+    to {left: 5px}
+}
+
+
+@media (max-width: 991px) {
+    .resp-left-align{
+        text-align: left !important;
+    }
+    .contact-footer * {
+        text-align: center !important;
+    }
+    .social-media-link {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+}
+
+
+::ng-deep .pipedriveWebForms iframe {
+    max-width: 100% !important;
+}

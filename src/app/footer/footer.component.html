@@ -1,0 +1,135 @@
+<div class="container-fluid" style="background: #434343">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6" style="padding-left: 1.7vw">
+        <h6 style="font-size: 22px; font-weight: 300">
+          <span class="highlight">New</span>sletter
+        </h6>
+        <h4>
+          Drop your email if you’d love to receive tech insights and amazing
+          offers curated by
+          <div class="yellow">Reboot Monkey.</div>
+        </h4>
+        <form style="max-width: 40%; margin-top: 32px" [formGroup]="newsletterForm" class="newsletter-form"
+          (submit)="joinNewsletter(newsletterForm.value)">
+          <input formControlName="email" placeholder="Your mail address" />
+          <button aria-label="subscribe" type="submit">
+            <svg width="24" height="19" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12.6512 6.5418L7.69869 8.93399M7.74925 9.23329L8.68034 16.5293C8.75349 17.1024 8.79006 17.389 8.92271 17.5123C9.03791 17.6194 9.19677 17.666 9.35156 17.6382C9.5298 17.6062 9.71548 17.3848 10.0868 16.9421L21.864 2.90202C22.2264 2.46991 22.4077 2.25385 22.4093 2.07452C22.4108 1.91872 22.3395 1.77116 22.2165 1.67543C22.0751 1.56524 21.7932 1.57289 21.2294 1.58818L2.90417 2.08532C2.3283 2.10094 2.04037 2.10875 1.90454 2.22821C1.78658 2.33195 1.72423 2.4851 1.73619 2.64173C1.74996 2.82209 1.95057 3.02879 2.35179 3.44219L7.52977 8.7774C7.59868 8.8484 7.63313 8.8839 7.65956 8.92447C7.68301 8.96047 7.70172 8.99933 7.71523 9.04011C7.73046 9.08607 7.73673 9.13514 7.74925 9.23329Z"
+                stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="col-lg-6">
+        <div>
+          <img src="../../assets/subscribeMonkey.webp" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="container">
+  <div class="row second-footer" style="align-items: start;       max-width: 97vw;
+  ">
+    <div class="col-lg-4 logo-responsve" class="ftr-logo">
+      <img alt="logo" src="../../assets/logo-new-png.webp" class="big-logo" />
+      <!-- <br/> -->
+      <p style="margin-top: 2vh; font-size: 16px; line-height: 19.2px">
+        Your Global Guide Through Data Center Jungle
+      </p>
+      <!-- Made with love by <a [routerLink]="['/']" class="yellow reboot-monkey-footer-link">Reboot Monkey</a> -->
+      <p style="
+          margin-top: 1vh;
+          font-size: 16px;
+          line-height: 19.2px;
+          padding: 0;
+        ">
+        Reboot Monkey offers fully-remote data center management services and
+        solutions that every IT infrastructure demands for reliable,
+        sustainable, and cost-effective operations. Let’s simplify processing,
+        storage and dissemination of your critical data, rebooting your system
+        from the ground up.
+      </p>
+      <div style="
+          display: flex;
+          justify-content: start;
+          flex-direction: row;
+          gap: 23px;
+        " class="icn-respnsive">
+        <a style="width: 1vw" target="_blank" href="https://www.linkedin.com/company/rebootmonkey/">
+          <img class="footerIcon" src="../../assets/footerLinked-new.svg.webp" alt="loading" />
+        </a>
+        <!-- <a style="width: 1vw" href="#" >
+          <img class="footerIcon" src="../../../assets/insta-new.webp" alt="loading" />
+        </a> -->
+        <a style="width: 1vw" target="_blank" href="https://twitter.com/rebootmonkey?lang=en">
+          <img class="footerIcon" src="../../assets/tw-new.webp" alt="loading" />
+        </a>
+        <a style="width: 1vw" target="_blank" href="https://www.facebook.com/therebootmonkey/">
+          <img class="footerIcon" src="../../assets/fb-new1.webp" alt="loading" />
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-2 ftr-frst-row">
+      <h4 class="underlined">Company</h4>
+      <a [routerLink]="['/about-us']">About Us</a>
+      <!-- <a href="#">Our Team</a>
+      <a href="#">FAQs</a> -->
+      <a [routerLink]="['/about-us/careers']">Careers</a>
+      <a [routerLink]="['/privacy-policy']">Privacy Policy</a>
+      <!-- <a [routerLink]="['/contact-us']">Contact</a> -->
+      <!-- <a [routerLink]="['/about-us/locations']">Our locations</a> -->
+      <!-- <a href="https://support.rebootmonkey.com" target="_blank">Support</a> -->
+    </div>
+    <div class="col-lg-2" class="ftr-scnd-row">
+      <h4 class="underlined">Products</h4>
+      <a [routerLink]="['/products/' + product.link]
+            " *ngFor="let product of products">{{ product.title }}</a>
+
+    </div>
+    <div class="col-lg-4" class="ftr-btm-row">
+      <h4 class="underlined">Services</h4>
+      <div class="service">
+        <ul class="ftr-btm-frst-row">
+          <li><a [routerLink]="['/services/rack-and-network']"> Rack & Network </a></li>
+          <li><a [routerLink]="['/services/hardware-monitoring']"> Monitoring </a></li>
+          <li><a [routerLink]="['/services/smart-hands']"> Smart Hands </a></li>
+          <li><a [routerLink]="['/services/data-destroying']"> Data Destroying </a></li>
+          <li><a [routerLink]="['/services/hardware-recycling']"> Recycling </a></li>
+        </ul>
+        <ul class="ftr-side-clm">
+          <!-- <li><a href="#"> Design </a></li> -->
+          <li><a [routerLink]="['/services/rack-and-stack']"> Rack and Stack </a></li>
+          <li><a [routerLink]="['/services/remote-hands']"> Remote Hands </a></li>
+          <!-- <li><a href="#"> Hardware </a></li> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="yellow-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4 text-center text-md-left">
+        <a href="tel:+31234568188">
+          <i class="fa fa-phone"></i>
+          +31 23 456 8188
+        </a>
+      </div>
+      <div class="col-12 col-md-4 text-center">
+        <span>
+          Tappersweg 10F, 2031 ET Haarlem, Netherlands
+        </span>
+      </div>
+      <div class="col-12 col-md-4 text-center text-md-right">
+        <a href="mailto:support@rebootmonkey.com">
+          <i class="fa fa-envelope"></i>
+          support@rebootmonkey.com
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+@import "../../../variables.scss";
+
+.yellow-bg {
+    background-color: $primaryColor;
+    padding: 30px 0;
+
+    .col-lg-9 {
+        display: flex;
+        align-items: center;
+
+        * {
+            color: #000;
+            font-weight: bold;
+        }
+    }
+}
+
+.partner-holder {
+    background: #fff;
+    border-radius: 10px;
+    height: 150px;
+    position: relative;
+    padding: 20px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 15px auto;
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.1);
+    img {
+        height: auto;
+        width: 100%;
+    }
+}

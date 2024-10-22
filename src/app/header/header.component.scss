@@ -1,0 +1,142 @@
+@import "../../variables.scss";
+
+.navbar {
+    padding-top: 5px;
+    img {
+        height: 35px;
+    }
+}
+#navbarNavDropdown {
+    flex-direction: row-reverse;
+}
+.nav-link {
+    color: $white;
+    font-weight: bold;
+    padding: 10px 22px !important;
+}
+.navbar-nav .nav-link.active {
+    color: $primaryColor;
+}
+.btn-container {
+    padding-top: 5px;
+}
+
+.dropdown-toggle:hover + .dropdown-menu, .dropdown-menu:hover {
+    display: block;
+}
+.dropdown-menu a {
+    background: transparent !important;
+    color: $primaryColor;
+}
+.dropdown-menu a:hover, .dropdown-menu a.dropdown-item.active {
+    color: $primaryColor;
+    background-color: #111 !important;
+}
+.dropdown-menu {
+    background: #222;
+}
+.dropdown-toggle::after {
+    color: $white;
+}
+.search-input {
+    display: none;
+}
+.container-fluid {
+    padding: 0;
+}
+.shop-link {
+    margin-top: 5px;
+}
+.container {
+    max-width: 955px;
+}
+.shop-link a {
+    position: relative;
+}
+.counter {
+    background-color: red;
+    color: #fff;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.cart {
+    margin-top: 8px;
+    position: relative;
+    .counter {
+        position: absolute;
+    }
+}
+
+@media (max-width: 1100px) {
+    li.nav-item {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 991px) {
+    .container-fluid {
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+    }    
+    .mobile-align-left {
+        text-align: left !important;
+    }
+    .navbar-brand {
+        img {
+            max-width: 170px;
+            height: auto !important;
+            filter: brightness(0) invert(1);
+        }
+    }
+    .our-shop {
+        color: $primaryColor !important;
+        background-color: transparent;
+    }
+    .search-input {
+        display: block;
+        position: relative;
+        input {
+            background-color: #424444;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border: none;
+            width: 100%;
+            padding-left: 40px;
+        }
+        img {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px;
+        }
+    }
+}
+.sticky-header {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background-color: #000;
+    min-width: 100%;
+    transition: top 0.3s;
+}
+
+.padding-header {
+    padding-top: 61px;
+}
+
+@media screen and (max-width: 992px) {
+    .navbar-collapse {
+        display: none;
+    }
+}

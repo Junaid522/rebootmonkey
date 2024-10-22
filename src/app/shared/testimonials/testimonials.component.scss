@@ -1,0 +1,58 @@
+@import "../../../variables.scss";
+
+.container-fluid {
+    margin-bottom: 60px;
+}
+
+h4 {
+    display: inline-block;
+    margin-top: 60px;
+}
+
+[nz-carousel-content] {
+    text-align: center;
+    overflow: hidden;
+    height: 310px;
+}
+.slider {
+    margin-top: 30px;
+}
+.testimonial {
+    text-align: left;
+    color: #fff;
+    max-width: 350px;
+    border-radius: 5px;
+    background: transparent;
+    padding: 10px;
+    margin: 0 auto;
+    transition: background 0.2s ease-in-out;
+    &:hover {
+        background: #433e00;
+    }
+    h4 {
+        margin: 5px 0;
+        color: $primaryColor;
+    }
+    img {
+        width: auto;
+    }
+    .author {
+        display: flex;
+        margin-top: 60px;
+        .author-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: top center;
+            margin-right: 20px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+}
+
+::ng-deep .slick-list, .slick-track {
+    height: 350px !important;
+}

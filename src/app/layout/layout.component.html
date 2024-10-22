@@ -1,0 +1,11 @@
+<rm-header></rm-header>
+<ng-content></ng-content>
+<rm-footer></rm-footer>
+<nz-modal class="contact-us-holder" [(nzVisible)]="isVisible" (nzOnCancel)="contactUsDiscard()" [nzFooter]="null" [nzCentered]="true">
+    <ng-container *nzModalContent>
+        <rm-contact-us [embeded]="true"></rm-contact-us>
+    </ng-container>
+</nz-modal>
+<a href="https://wa.me/+31686006400" target="_blank" class="whatsapp-icon">
+    <i class="fa fa-whatsapp"></i>
+</a>

@@ -1,0 +1,42 @@
+@import "../../../variables.scss";
+
+.thank-you-img {
+    text-align: center;
+    padding-top: 70px;
+    img {
+        width: 300px;
+    }
+}
+.book-container {
+    padding: 8px;
+    background-color: #434343;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    #CalendlyDiv {
+        border-radius: 10px;
+        min-width:320px;
+        height:900px; 
+            }
+}
+.left-border {
+    border-left: 1px solid #fff;
+}
+
+p {
+    a {
+        color: $primaryColor;
+    }
+}
+
+.yellow-bg {
+    background-color: rgba(240, 222, 0, 0.2);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 992px) {
+    .left-border {
+        border: none;
+    }
+}

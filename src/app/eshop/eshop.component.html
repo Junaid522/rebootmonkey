@@ -1,0 +1,54 @@
+<div class="holder">
+    <rm-landing></rm-landing>
+    <div class="container">
+        <div *ngIf="tab === 'rack' || tab === 'frack'" class="summary">
+            <h5 class="underlined" style="display: inline-block; width: auto;">
+                Our Products
+            </h5>
+            <h2>
+                Your (remote) pair of expert hands for any task
+            </h2>
+            <p>
+                At Reboot Monkey, we offer a full range of services. Below you’ll find a brief overview of these
+                services. Of course we can also provide you with customized services.
+            </p>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <br />
+        <rm-overview></rm-overview>
+        <!-- <nz-tabset>
+            <nz-tab>
+            </nz-tab>
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['.']" [queryParams]="{ tab: 'rack' }"
+                    queryParamsHandling="merge">
+                    Rack Unit
+                </a>
+                <rm-rack></rm-rack>
+            </nz-tab>
+            <nz-tab>
+                <a *nzTabLink nz-tab-link [routerLink]="['.']" [queryParams]="{ tab: 'frack' }"
+                    queryParamsHandling="merge">
+                    Full Rack
+                </a>
+                <rm-frack></rm-frack>
+            </nz-tab>
+            <nz-tab *ngFor="let item of categories$ | async">
+                <a *nzTabLink nz-tab-link [routerLink]="['.']" [queryParams]="{ tab: item.name, id: item.id }"
+                    queryParamsHandling="merge">
+                    {{item.name}}
+                </a>
+                <rm-shop [type]="item.name" [categoryId]="item.id"></rm-shop>
+            </nz-tab>
+            <nz-tab>
+                <a *nzTabLink nz-tab-link (click)="openContactUs()">
+                    Cage
+                </a>
+                <rm-cage></rm-cage>
+            </nz-tab>
+        </nz-tabset> -->
+    </div>
+    <br/>
+    <br/>
+</div>

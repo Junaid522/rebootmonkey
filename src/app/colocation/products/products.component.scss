@@ -1,0 +1,46 @@
+.container-fluid {
+    background: #181600;
+    margin-top: -11px;
+    z-index: 1;
+    position: relative;
+}
+.product:hover strong:after {
+    width: 24px;
+}
+
+.product strong:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background: #f0de00;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width 0.2s ease-in-out;
+}
+.product:hover img {
+    filter: brightness(0) invert(1) invert(77%) sepia(69%) saturate(886%) hue-rotate(2deg) brightness(106%) contrast(102%) brightness(3.4);
+}
+.product strong {
+    text-align: center;
+    position: relative;
+}
+.product {
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.product img {
+    height: 75px;
+    width: auto;
+    text-align: center;
+    margin-bottom: 14px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.2s ease-in-out;
+}

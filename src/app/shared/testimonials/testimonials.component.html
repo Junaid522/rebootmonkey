@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="text-center">
+            <h4 class="underlined">
+                Testimonials
+            </h4>
+            <h2 class="text-center">
+                Loved by Thousands of Clients
+            </h2>
+            <h5 class="text-center">
+                We place huge value on strong relashionships and have seen the benifit they bring to our
+                business.customer feedback is vital in helping us to get it right.
+            </h5>
+        </div>
+        <div class="slider">
+            <nz-carousel nzAutoPlay slidesToShow="3">
+                <div nz-carousel-content *ngFor="let item of testimonials">
+                    <div class="testimonial">
+                        <img src="../../../assets/qouted icon.webp"/>
+                        <h4>
+                            {{item.title}}
+                        </h4>
+                        <p>
+                            {{item.body}}
+                        </p>
+                        <div class="author">
+                            <div class="author-img" style="background-image: url(https://media.istockphoto.com/id/1309328823/photo/headshot-portrait-of-smiling-male-employee-in-office.webp?s=170667a&w=0&k=20&c=_7-hSDG3PL7yEDXLGdk_CbOQibGCbQXYbIQX7EnfeO0=);"></div>
+                            <div>
+                                <strong>
+                                    {{item.name}}
+                                </strong>
+                                <p>
+                                    {{item.position}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nz-carousel>
+        </div>
+    </div>
+</div>

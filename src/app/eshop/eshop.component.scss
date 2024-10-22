@@ -1,0 +1,37 @@
+@import "../../variables.scss";
+
+::ng-deep .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #fff;
+}
+::ng-deep .ant-tabs-ink-bar {
+    background: $primaryColor;
+}
+::ng-deep .ant-tabs-tab-btn:active {
+    color: $primaryColor;
+}
+::ng-deep .ant-tabs-tab-btn {
+    color: #aaa;
+}
+::ng-deep .ant-tabs-top>.ant-tabs-nav::before {
+    border-color: #aaa;
+}
+::ng-deep nz-tabs-nav.ant-tabs-nav {
+    width: 1140px;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    margin-bottom: 60px !important;
+}
+a {
+    color: inherit;
+}
+.holder {
+    background-image: url(../../assets/servicebg2.webp);
+    background-attachment: fixed;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.summary {
+    padding: 50px 0;
+    text-align: center;
+}

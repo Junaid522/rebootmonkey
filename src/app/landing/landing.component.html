@@ -1,0 +1,47 @@
+<div class="container-fluid yellow-bg">
+  <div class="logo-particles">
+    <div *ngFor="let position of logoPositions" class="logo"
+      [style.top]="position.top" [style.left]="position.left"
+      [style.opacity]="position.opacity">
+      <img [src]="logoUrl" alt="Logo">
+    </div>
+  </div>
+  <div id="grid-monkey">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6"> 
+          <h2 class="child-heading mb-0">Reboot Monkey</h2>
+          <h1 class="heading">
+            Your Global Guide
+            <br />
+            Through Data Center Jungle
+          </h1>
+          <p class="dark-text mb-0">
+            Delivering powerful data center management services and solutions
+            freeing you from operational hassles that your IT infrastructure
+            entails. Get hosting space, future-proof advancement, and
+            round-the-clock management support on demand from our smart or
+            remote
+            hands. Let us handle it all for your securily, sustainably, and
+            reliably.
+          </p>
+          <div class="mobile-close">
+          <br />
+          <br />
+          </div>
+          <div>
+            <button (click)="openContactUs()"
+            class="btn-primary outlined black btn-get-quote theme-btn-big">
+            Get A Quote
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6 text-right">
+          <img class="grid-monkey-img" src="../../assets/landing.webp"
+            alt="hero-img" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

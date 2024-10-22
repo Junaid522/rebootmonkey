@@ -1,0 +1,431 @@
+@import "../../../variables.scss";
+
+.yellow-bg {
+    background-color: $primaryColor;
+    padding: 17px 0;
+    padding-bottom: 17px;
+
+    .col-lg-9,
+    .col-lg-8 {
+        display: flex;
+        // align-items: center;
+
+        * {
+            color: #000;
+            font-weight: bold;
+        }
+    }
+}
+
+.container {
+    max-width: 1440px;
+}
+
+.service-text {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.service-cover-text {
+    background: url(../../../assets/smarthandsbg.webp);
+    background-position: center;
+    background-size: cover;
+    padding: 60px 30px;
+    text-align: center;
+
+    * {
+        color: #fff;
+        font-weight: bold;
+    }
+}
+
+.service-list-item p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.service-list-item strong {
+    font-weight: bold;
+    font-size: 20px !important;
+}
+
+.service-list-item:hover {
+    background: #F0DE0033;
+}
+
+.service-list-item img {
+    width: 70px;
+    padding: 11px;
+}
+
+.service-list-item {
+    display: flex;
+    font-size: 16px;
+    border-radius: 10px;
+    background: transparent;
+    align-items: center !important;
+    transition: background 0.2s ease-in-out;
+    align-items: flex-start;
+}
+
+.contact {
+    background-color: #F0DE0033;
+    padding: 30px;
+
+    img {
+        max-width: 200px;
+    }
+
+    .row {
+        align-items: flex-end;
+
+        .col-md-9 {
+            padding: 30px 15px;
+        }
+    }
+}
+
+.cloud {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.service {
+    >div {
+        padding: 15px;
+        border-radius: 10px;
+        background: transparent;
+        transition: background 0.2s ease-in-out;
+
+        &:hover {
+            background: #F0DE0033;
+        }
+    }
+
+    h4 {
+        font-weight: bold;
+        font-size: 22px;
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    img {
+        width: 83px;
+        height: auto;
+        overflow-clip-margin: border-box;
+    }
+}
+
+// Added css
+.section-header.row h1 {
+    font-size: 48px;
+    color: #121212 !important;
+}
+
+.section-header.row p {
+    font-size: 22px;
+    color: #121212 !important;
+}
+
+// .section-header.row a {
+//     font-size: 26px;
+//     color: #F0DE00 !important;
+// }
+
+
+.container-fluid.service-cover-text a {
+    font-size: 20px;
+    padding: 8px 10px;
+    color: #121212 !important;
+    width: 214px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    line-height: normal;
+    text-align: center;
+    margin: auto;
+}
+
+.container.service-text h4 {
+    font-size: 32px;
+    font-weight: 750;
+}
+
+.company-list {
+    font-size: 20px;
+}
+
+.service-ensures h3 {
+    font-size: 32px;
+    font-weight: 750;
+}
+
+.service.text-center strong {
+    font-size: 28px;
+}
+
+.btn-all a {
+    font-size: 20px;
+    padding: 8px 10px;
+    color: #121212 !important;
+    width: 214px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    line-height: normal;
+    text-align: center;
+    margin: auto;
+}
+
+.favorite-approach h5 {
+    font-size: 24px;
+}
+
+.favorite-approach h3 {
+    font-size: 32px;
+}
+
+.favorite-approach p {
+    font-size: 24px;
+}
+
+.favorite-approach-2 strong {
+    font-size: 24px !important;
+}
+
+.favorite-approach-2 p {
+    font-size: 20px !important;
+}
+
+.container-fluid.contact h3 {
+    font-size: 32px;
+}
+
+
+
+.container-fluid.contact a {
+    font-size: 20px;
+    padding: 8px 10px;
+    color: #121212 !important;
+    width: 214px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    line-height: normal;
+    text-align: center;
+    margin: auto;
+}
+
+.why-hire h3 {
+    font-size: 32px;
+}
+
+.why-hire p {
+    font-size: 24px;
+}
+
+.why-hire a {
+    font-size: 20px;
+    padding: 8px 10px;
+    color: #121212 !important;
+    width: 214px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    line-height: normal;
+    text-align: center;
+}
+
+
+.service-list-item.para p {
+    font-size: 22px;
+    line-height: normal;
+}
+
+.approach h5 {
+    font-size: 24px;
+}
+
+.approach h3 {
+    font-size: 32px;
+}
+
+.approach p {
+    font-size: 24px;
+}
+
+.sec-change strong {
+    font-size: 22px;
+}
+
+.sec-change p {
+    font-size: 20px;
+}
+
+.sec-change a {
+    font-size: 20px;
+    padding: 8px 10px;
+    color: #121212 !important;
+    width: 214px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    line-height: normal;
+    text-align: center;
+    margin: auto;
+}
+
+.empower h3 {
+    font-size: 32px;
+}
+
+.empower p {
+    font-size: 24px;
+}
+
+.empower a {
+    font-size: 20px;
+    padding: 8px 10px;
+    color: #121212 !important;
+    width: 214px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    line-height: normal;
+    text-align: center;
+    margin: auto;
+}
+
+.hug {
+    display: grid;
+    align-items: center;
+}
+
+.hug2 img {
+    width: 300px;
+    margin-top: 50px;
+}
+
+.inner-width {
+    max-width: 1159px !important;
+    margin: auto;
+}
+
+.back_grd_img1 {
+    background-image: url('../../../assets/services/image_backgrd.webp');
+    background-repeat: no-repeat;
+}
+
+.size-custm h4 {
+    font-size: 32px;
+}
+
+.banner2 {
+    padding-left: 38px;
+    padding-right: 51px;
+    padding-bottom: 100px;
+}
+
+.logo_change1 img {
+    width: 125px !important;
+}
+
+.logo_change1 p {
+    font-size: 22px !important;
+    line-height: normal;
+    font-weight: normal;
+}
+
+.logo_change2 img {
+    width: 114px !important;
+}
+
+.service-text2 {
+    padding: 100px 38px;
+}
+
+.in-inner-wth {
+    width: 950px;
+    margin: auto;
+}
+
+.clo_sep {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.clo_sep h2 {
+    margin-left: -40px;
+}
+
+.size-custm{
+    display: unset !important;
+}
+
+@media (min-width: 991px) and (max-width: 4000px){
+
+    .inner-sec-width p {
+        width: 700px;
+        margin-right: auto;
+    }
+    .container-fluid.service-cover-text p {
+        font-size: 24px;
+    }
+    .point_fle {
+        display: inline-flex;
+        line-height: normal;
+        margin: 10px 0;
+        font-size: 22px;
+    }
+    
+    .point_fle2 {
+        display: inline-flex;
+        line-height: normal;
+        margin: 10px 0;
+        font-size: 22px;
+        font-weight: normal !important;
+    }
+    .cloud {
+        width: 450px;
+    }
+    
+    .container-fluid.contact p {
+        font-size: 24px;
+    }
+    .container.service-text p {
+        font-size: 24px;
+    }
+    .why-hire2 {
+        padding: 115px 38px;
+    }
+    
+.why-hire2 a {
+    font-size: 20px;
+    padding: 8px 10px;
+    color: #121212 !important;
+    width: 214px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    line-height: normal;
+    text-align: center;
+}
+}
+
+@media (max-width: 1000px){
+.clo_sep{
+    margin-left: 0px !important;
+}
+}

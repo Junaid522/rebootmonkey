@@ -1,0 +1,60 @@
+@import "../../variables.scss";
+
+.yellow-bg {
+    background-color: $primaryColor;
+    padding: 17px 0;
+    padding-bottom: 17px;
+
+    .col-lg-9,
+    .col-lg-8 {
+        display: flex;
+        // align-items: center;
+
+        * {
+            color: #000;
+            font-weight: bold;
+        }
+    }
+}
+
+.heading {
+    text-align: center;
+    color: black;
+}
+
+.container {
+    max-width: 1440px;
+}
+
+
+.col-lg-4 {
+    .header-img {
+        max-height: 300px !important;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.privacy-container {
+    margin: 50px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.unstyle-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $primaryColor;
+}
+
+.cookie-purpose {
+    margin: 8px 12px;
+    strong, div {
+        margin: 8px 0px;
+    }
+}

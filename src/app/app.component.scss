@@ -1,0 +1,13 @@
+.yellow-bg {
+    position: relative; 
+    overflow: hidden;
+}  
+
+::ng-deep .ant-modal-header,
+::ng-deep .ant-modal-footer,
+::ng-deep .ant-modal-body {
+    background: #000000;
+    color: #fff;
+    border-color: #343434;
+    padding: 0px;
+}

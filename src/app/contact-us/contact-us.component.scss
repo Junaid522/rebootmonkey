@@ -1,0 +1,296 @@
+@import "../../variables.scss";
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $primaryColor;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $primaryColor;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: $primaryColor;
+  }
+
+
+  .container{
+    .accordion{
+      
+      
+      
+        .accordion-content{
+            p{
+                margin: 0;
+                padding: 0;
+            }
+            .inner-content{
+                margin: 10px 0;
+            }
+            .grey{
+                color: #E0DEDE;
+                font-size: 14px;
+            }
+            .title{
+                font-weight: 600; 
+            }
+            .sub-title{
+                font-size: 13px;
+            }
+            .lined{
+                text-decoration: underline;
+            }
+        }
+    }
+    .centered{
+        padding-top: 70px;
+        margin: auto;
+        width: max-content;
+        text-align: center;
+       p{
+        color: #E0DEDE;
+        font-size: 14px;
+       }
+    }
+    
+  }
+.container.old:not(.embeded) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.container.old.embeded {
+    form {
+        margin-top: 0 !important;
+    }
+}
+form {
+    margin-top: 150px;
+    input, textarea, select {
+        border: none;
+        border-bottom: 2px solid $primaryColor;
+        color: $primaryColor;
+        background: $black;
+        display: block;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    textarea {
+        border: 1px solid $primaryColor;
+        min-height: 160px;
+    }
+    input, select {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .input-holder {
+        position: relative;
+        &::before {
+            content: "*";
+            position: absolute;
+            top: 0px;
+            left: 5px;
+            color: $primaryColor;
+        }
+    }
+}
+
+.contact-footer {
+    margin-top: 50px;
+    a {
+        text-decoration: none;
+    }
+}
+
+.social-media-link {
+    color: $black;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin-right: 15px;
+    background-color: $primaryColor;
+    text-align: center;
+    padding-top: 8px;
+    border-radius: 100%;
+    margin-bottom: 10px;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+@keyframes arrowHover {
+    from {left: 0}
+    to {left: 5px}
+}
+
+
+@media (max-width: 991px) {
+    .resp-left-align{
+        text-align: left !important;
+    }
+    .contact-footer * {
+        text-align: center !important;
+    }
+    .social-media-link {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+}
+
+::ng-deep .pipedriveWebForms iframe {
+    max-width: 100% !important;
+}
+
+
+
+
+.cu-container {
+    padding: 0;
+}
+.cu-header {
+    background-color: $primaryColor;
+    h1 {
+        font-weight: bold;
+    }
+    * {
+        color: $black;
+    }
+    .container {
+        padding-top: 30px;
+    }
+}
+.big-circle {
+    color: $primaryColor;
+    font-size: 30px;
+}
+.no-style {
+    list-style: none;
+    padding: 0;
+    li {
+        span {
+            line-height: 1;
+            vertical-align: bottom;
+        }
+    }
+}
+form {
+    margin-top: 60px;
+    border-radius: 5px;
+    border: 1px solid $primaryColor;
+    padding: 20px;
+    label {
+        color: $primaryColor;
+        font-weight: bold;
+    }
+    input, textarea, select {
+        border: 1px solid $primaryColor;
+        border-radius: 5px;
+        padding: 10px 5px;
+        background-color: #434343;
+        margin: 0;
+        &:focus {
+            border: 1px solid $primaryColor;
+            outline: 1px solid $primaryColor;
+        }
+    }
+    .input-container {
+        margin-bottom: 15px;
+    }
+}
+.col-lg-12 {
+    form {
+        margin: 0
+    }
+}
+
+.cu-container.embeded {
+    form {
+        border: none;
+        background-color: #000;
+        input, textarea, select {
+            border: none;
+        }
+        // label {
+        //     color: #434343;
+        // }
+        small {
+            display: none;
+        }
+        .btn-primary {
+            border: 1px solid $primaryColor;
+            color: $primaryColor !important;
+            background-color: #000;
+        }
+    }
+    .form-title {
+        color: #fff;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            left: 0;
+            bottom: -4px;
+            width: 60px;
+            background-color: $primaryColor;
+        }
+    }
+}
+
+.iti--allow-dropdown input, .iti--allow-dropdown input[type=text], .iti--allow-dropdown input[type=tel], .iti--separate-dial-code input, .iti--separate-dial-code input[type=text], .iti--separate-dial-code input[type=tel] {
+    padding-right: 6px !important;
+    padding-left: 52px !important;
+    margin-left: 0 !important;
+}
+
+::ng-deep .intl-phone .iti input,
+::ng-deep .intl-phone .iti input[type=text],
+::ng-deep .intl-phone .iti input[type=tel] {
+    position: relative !important;
+    z-index: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-right: 36px !important;
+    margin-right: 0 !important;
+}
+::ng-deep .intl-phone .iti {
+    position: relative;
+    display: block !important;
+}
+::ng-deep .intl-phone .iti--allow-dropdown input,
+::ng-deep .intl-phone .iti--allow-dropdown input[type=text], 
+::ng-deep .intl-phone .iti--allow-dropdown input[type=tel], 
+::ng-deep .intl-phone .iti--separate-dial-code input, 
+::ng-deep .intl-phone .iti--separate-dial-code input[type=text], 
+::ng-deep .intl-phone .iti--separate-dial-code input[type=tel] {
+    padding-right: 6px !important;
+    padding-left: 52px !important;
+    margin-left: 0 !important;
+}
+::ng-deep .intl-phone .iti__country-name {
+    color: #333;
+}
+::ng-deep .intl-phone .iti__arrow {
+    border-top-color: #fff !important;
+}
+::ng-deep .intl-phone ::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: #777;
+}
+::ng-deep .intl-phone :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #777;
+    opacity: 1;
+}
+::ng-deep .intl-phone ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #777;
+    opacity: 1;
+}
+::ng-deep .intl-phone :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #777;
+}
+
+

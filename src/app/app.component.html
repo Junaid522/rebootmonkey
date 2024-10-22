@@ -1,0 +1,16 @@
+<!-- <rm-stuff-only *ngIf="stuffPassword !== currentStuffPassword"></rm-stuff-only> -->
+<!-- <rm-layout *ngIf="stuffPassword === currentStuffPassword"> -->
+<rm-layout>
+  <router-outlet></router-outlet>
+</rm-layout>
+  <nz-modal
+  nzCentered
+  [nzStyle]="{ top: '20px', padding: 0, width: '512px' }"
+  [(nzVisible)]="showPopup"
+  [nzFooter]="null"
+  (nzOnCancel)="close()"
+  >
+  <ng-container *nzModalContent>
+    <rm-offer-popup (closePopup)="close()"></rm-offer-popup>
+  </ng-container>
+  </nz-modal>

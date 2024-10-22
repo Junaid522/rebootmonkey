@@ -1,0 +1,48 @@
+<div class="container">
+    <h1 style="text-align: center;" class="resp-left-align">
+        Get A Quote
+    </h1>
+    <!-- <div class="pipedriveWebForms" data-pd-webforms="https://webforms.pipedrive.com/f/6qkTzPAhCVqKuyVZdxfiBUck6CR5dTrT0DCNTMXs6AAEO5CaaymCeQH7WBrS9poj63"></div> -->
+    <div class="row justify-content-center">
+        <div class="col-md-5 resp-left-align" style="text-align: center;">
+            Want to request a quote, get information about one of our products/ services or want to meet up for coffee? Contact us by filling out the form and we'll try to get back to you as fast as possible.
+        </div>
+        <div class="col-md-12">
+            <form (submit)="sendMessage(contactUsForm.value)" [formGroup]="contactUsForm">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="input-holder"><input name="name" formControlName="name" placeholder="Your Name & last name"/></div>
+                        <div class="input-holder"><input name="email" formControlName="email" type="email" placeholder="Email"/></div>
+                        <div class="input-holder"><input name="phone" formControlName="phone" placeholder="Telephone number"/></div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="yellow">*Detailed message</label>
+                        <textarea name="message" formControlName="message"></textarea>
+                    </div>
+                </div>
+                <button type="submit">
+                    Send <img alt="send" src="../../assets/arrow.webp"/>
+                </button>
+            </form>
+        </div>
+        <div class="col-md-12">
+            <p style="text-align: center;">
+                <br/>
+                <br/>
+                <br/>
+                Consult our <a (click)="openContactUs()" class="yellow">code of ethics</a> and our <a href="#" class="yellow">values</a> for more information.
+            </p>
+        </div>
+        <div class="col-md-12 contact-footer">
+            <div class="row">
+                <div class="col-md-5">
+                </div>
+                <div class="col-md-7">
+                    <p class="yellow" style="text-align: right; margin-bottom: 0; margin-top: 7px;">
+                        <a class="yellow" href="mailto:Reboot@monkey.com">Reboot@monkey.com</a> - Tappersweg 10F  2031 ET Haarlem - <a class="yellow" href="tel:+31234568188">+31234568188</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

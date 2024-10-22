@@ -1,0 +1,50 @@
+@import "../../../variables.scss";
+
+.container-fluid {
+    background-image: url(../../../assets/servicebg2.webp);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: left;
+}
+h5 {
+    width: auto;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.center {
+    justify-content: center;
+}
+.service-container {
+    justify-content: center;
+    margin-top: 30px;
+}
+.service {
+    text-align: center;
+    > div {
+        padding: 5px;
+        border-radius: 10px;
+        background: transparent;
+        transition: background 0.2s ease-in-out;
+        &:hover {
+            background: #F0DE0033;
+        }
+    }
+    h4 {
+        font-weight: bold;
+        color: $primaryColor;
+        font-size: 22px;
+        margin-top: 20px;
+    }
+    p {
+        font-size: 16px;
+    }
+    img {
+        width: 90px;
+        height: auto;
+        padding: 19px 17px;
+        background: rgb(240 222 0 / 10%);
+        border-radius: 50%;
+        overflow-clip-margin: border-box;
+    }
+}

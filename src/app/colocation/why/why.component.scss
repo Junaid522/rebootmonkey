@@ -1,0 +1,35 @@
+.container-fluid {
+    background-image: url(../../../assets/oval.webp);
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+.img {
+    display: flex;
+    align-items: center;
+}
+.reason:hover {
+    background: #433e00;
+}
+
+.reason p {
+    font-size: 16px;
+}
+.reason strong {
+    font-size: 21px;
+}
+.reason img {
+    height: 100px;
+    width: auto;
+    padding: 22px;
+}
+.reason {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    background: transparent;
+    transition: background 0.2s ease-in-out;
+}

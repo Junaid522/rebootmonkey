@@ -1,0 +1,84 @@
+::ng-deep .ant-collapse-header {
+    background: #434343;
+    color: #fff !important;
+    font-weight: bold;
+    font-size: 20px;
+}
+::ng-deep .ant-collapse>.ant-collapse-item {
+    border: none;
+    border-radius: 10px !important;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+::ng-deep nz-collapse.ant-collapse {
+    background: transparent;
+    border: none;
+}
+::ng-deep .ant-collapse-content {
+    border: none;
+    background: #121212;
+    color: #fff;
+}
+::ng-deep span.anticon.ant-collapse-arrow {
+    padding: 10px;
+    background: #fae200;
+    color: #000;
+    border-radius: 5px;
+}
+.holder {
+    background-image: url(../../../../assets/servicebg2.webp);
+    background-attachment: fixed;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.big {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 0;
+}
+.summary {
+    border-radius: 10px;
+    background-color: rgba(240, 222, 0, 0.2);
+    padding: 15px;
+    margin-top: 30px;
+}
+.summary-blk {
+    border-radius: 10px;
+    background-color: #434343;
+    padding: 15px;
+    margin-top: 30px;
+}
+tr td:last-child {
+    text-align: right;
+}
+table {
+    width: 100%;
+}
+tr {
+    td {
+        font-size: 14px;
+    }
+    strong {
+        font-size: 20px;
+        margin-top: 25px;
+        display: block;
+    }
+}
+.order-btn {
+    width: 100%;
+    text-align: center;
+}
+label {
+    margin-left: 5px;
+}
+.holder input, .holder label {
+    cursor: pointer;
+}
+.modal-input {
+    margin-bottom: 10px;
+}
+span.anticon.ant-modal-close-icon {
+    color: #fff;
+}

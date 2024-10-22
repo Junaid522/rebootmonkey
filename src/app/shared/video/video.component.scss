@@ -1,0 +1,33 @@
+.about-video {
+    max-width: 100%;
+    width: 100vw;
+    overflow: hidden;
+    height: 920px;
+    position: relative;
+    .blank-div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+    }
+    video {
+        height: 1000px;
+        width: 2000px;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+    &.auto{
+        height: unset;
+        video {
+            position: relative;
+            height: auto;
+            width: 100%;
+            left: unset;
+            transform: unset;
+        }
+    }
+}

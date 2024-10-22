@@ -1,0 +1,22 @@
+<h2 style="color: #fff; font-weight: bold;">
+    Location
+</h2>
+<div class="row">
+    <div class="col-md-6" *ngFor="let location of locations$ | async; let i = index">
+        <input [(ngModel)]="locationModel" (change)="fireChange()" id="location{{i}}" name="location" type="radio" [value]="location" /> <label for="location{{i}}">{{location}}</label>
+    </div>
+</div>
+<hr />
+<h2 style="color: #fff; font-weight: bold;">
+    Power
+</h2>
+<div class="row">
+    <div class="col-md-6" *ngFor="let power of power$ | async; let i = index">
+        <input [(ngModel)]="powerModel" (change)="fireChange()" id="power{{i}}" name="power" type="radio" [value]="power" /> <label for="power{{i}}">{{power}}</label>
+    </div>
+</div>
+<hr />
+<h2 style="color: #fff; font-weight: bold;">
+    Price
+</h2>
+<nz-slider [nzMin]="1" [nzMax]="10000" nzRange [(ngModel)]="price" (ngModelChange)="fireChange()"></nz-slider>

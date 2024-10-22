@@ -1,0 +1,676 @@
+<div class="container-fluid cu-container" [ngClass]="{embeded}">
+  <div class="cu-header" *ngIf="!embeded">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <nav class="beardcumb"
+            style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+            aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+              <li class="breadcrumb-item"><a [routerLink]="['/about-us']">About us</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+            </ol>
+          </nav>
+          <h1 class="heading">Contact Us</h1>
+          <p>
+            Whether you need some product or technical support, or anything else
+            in between – we're always happy to help.
+          </p>
+        </div>
+        <div class="col-lg-3">
+          <img src="../../assets/girl.webp" alt="girl" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cu-content">
+    <div class="container">
+      <h2 class="text-center" *ngIf="!embeded">
+        <br/>
+        We can help. Our team of experts is on hand to answer your questions.
+      </h2>
+      <div class="row">
+        <div class="col-lg-6" *ngIf="!embeded">
+          <img src="../../assets/fix.webp" />
+          <p>What you get after filling the form?</p>
+          <ul class="no-style">
+            <li>
+              <span class="big-circle">●</span> Response to your queries under
+              24 hours.
+            </li>
+            <li>
+              <span class="big-circle">●</span> Thoroughness and experties of an
+              IT specialist.
+            </li>
+            <li>
+              <span class="big-circle">●</span> An email follow -up with
+              solution and plan of action.
+            </li>
+          </ul>
+          <p>
+            Have a question regarding IT infrastructure and services? Our team
+            at Reboot Monkey are certified experts and receive industry specific
+            training to ensure clients get the best service possible.From basic
+            requirements to complex IT builds we are here to help! Reboot Monkey
+          </p>
+        </div>
+        <div
+          class="col-lg-6"
+          [ngClass]="{ 'col-lg-6': !embeded, 'col-lg-12': embeded }"
+        >
+          <form
+            (submit)="sendMessage(contactUsForm.value)"
+            [formGroup]="contactUsForm"
+          >
+            <h2 *ngIf="embeded" class="form-title">Contact Us</h2>
+            <re-captcha
+              #captchaRef
+              (resolved)="captchaResolved($event)"
+              [size]="'invisible'"
+              formControlName="recaptchaReactive"
+            ></re-captcha>
+            <div class="input-container">
+              <label> Full Name </label>
+              <input name="name" formControlName="name" />
+              <small>Required*</small>
+            </div>
+            <div class="input-container">
+              <label> Email </label>
+              <input formControlName="email" type="email" />
+              <small>Required*</small>
+            </div>
+            <div class="input-container intl-phone">
+              <label> Phone </label>
+              <input name="phone" #phone formControlName="phone" />
+              <small>Required*</small>
+            </div>
+            <div class="input-container">
+              <label> Company Name </label>
+              <input name="company" formControlName="company" />
+              <small>Required*</small>
+            </div>
+            <!-- <div class="input-container">
+              <label> Company Email </label>
+              <input formControlName="companyEmail" type="companyEmail" />
+              <small>Required*</small>
+            </div> -->
+            <div class="input-container">
+              <label> Service </label>
+              <select formControlName="service">
+                <option *ngFor="let item of services" [value]="item.title">
+                  {{ item.title }}
+                </option>
+                <!-- <option *ngFor="let item of products" [value]="item.title">
+                  {{ item.title }}
+                </option> -->
+                <option [value]="'Hiring'">Hiring</option>
+              </select>
+              <small>Required*</small>
+            </div>
+            <!-- <div class="input-container">
+              <label> Message </label>
+              <textarea name="message" formControlName="message"></textarea>
+              <small>Required*</small>
+            </div> -->
+            <div [ngClass]="{ 'text-center': !embeded }">
+              <button type="submit" class="btn-primary">
+                {{ embeded ? "Send a message" : "Submit" }}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="container"> -->
+    <!-- <div class="centered">
+      <h1 class="underlined">Global Locations</h1>
+    </div>
+    <div class="accordion accordion-flush bg-transparent my-5" id="accordion">
+      <div class="accordion-item bg-transparent text-white">
+        <h2 class="accordion-header bg-transparent" id="headingOne">
+          <button
+            class="accordion-button bg-transparent text-white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            Netherlands
+          </button>
+        </h2>
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse"
+          aria-labelledby="headingOne"
+          data-bs-parent="#accordion"
+        >
+          <div class="accordion-body">
+            <div class="d-flex flex-row justify-content-between mb-3">
+              <div class="p-2 accordion-content">
+                <i
+                  class="fa fa-clock-o fa-4x"
+                  style="color: #fae200"
+                  aria-hidden="true"
+                ></i>
+                <div class="inner-content">
+                  <p class="title">Business hours</p>
+                  <p class="grey sub-title">8:30 - 17:30 CET Mo/Fri</p>
+                </div>
+                <div>
+                  <p class="title">Public Holidays</p>
+                  <p class="yellow lined sub-title">Dutch public holidays</p>
+                </div>
+              </div>
+              <div class="p-2 accordion-content">
+                <i
+                  class="fa fa-phone fa-4x"
+                  style="color: #fae200"
+                  aria-hidden="true"
+                ></i>
+                <div class="inner-content">
+                  <p class="title">Telephone & fax:</p>
+                  <p class="grey sub-title">T +31222222222</p>
+                  <p class="grey sub-title">F +31222222222</p>
+                </div>
+                <div>
+                  <p class="grey sub-title">
+                    Chamber of Commerce: 301111111
+                    <br />
+                    VAT-number : NL2222222222
+                  </p>
+                </div>
+              </div>
+              <div class="p-2 accordion-content">
+                <div>
+                  <i
+                    class="fa fa-map-marker fa-4x"
+                    style="color: #fae200"
+                    aria-hidden="true"
+                  ></i>
+
+                  <div class="inner-content">
+                    <p class="title">Visitor’s address</p>
+                  </div>
+                  <div>
+                    <p class="grey sub-title">
+                      Reboot Monkey Netherlands B.V.
+                      <br />
+                      Hessenbergweg 95
+                      <br />
+                      1101 CX Amsterdam
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-transparent text-white">
+        <h2 class="accordion-header bg-transparent" id="headingtwo">
+          <button
+            class="accordion-button bg-transparent text-white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsetwo"
+            aria-expanded="true"
+            aria-controls="collapsetwo"
+          >
+            France
+          </button>
+        </h2>
+        <div
+          id="collapsetwo"
+          class="accordion-collapse collapse"
+          aria-labelledby="headingtwo"
+          data-bs-parent="#accordion"
+        >
+          <div class="accordion-body">
+            <div class="d-flex flex-row justify-content-between mb-3">
+              <div class="p-2 accordion-content">
+                <i
+                  class="fa fa-clock-o fa-4x"
+                  style="color: #fae200"
+                  aria-hidden="true"
+                ></i>
+                <div class="inner-content">
+                  <p class="title">Business hours</p>
+                  <p class="grey sub-title">8:30 - 17:30 CET Mo/Fri</p>
+                </div>
+                <div>
+                  <p class="title">Public Holidays</p>
+                  <p class="yellow lined sub-title">Dutch public holidays</p>
+                </div>
+              </div>
+              <div class="p-2 accordion-content">
+                <i
+                  class="fa fa-phone fa-4x"
+                  style="color: #fae200"
+                  aria-hidden="true"
+                ></i>
+                <div class="inner-content">
+                  <p class="title">Telephone & fax:</p>
+                  <p class="grey sub-title">T +31222222222</p>
+                  <p class="grey sub-title">F +31222222222</p>
+                </div>
+                <div>
+                  <p class="grey sub-title">
+                    Chamber of Commerce: 301111111
+                    <br />
+                    VAT-number : NL2222222222
+                  </p>
+                </div>
+              </div>
+              <div class="p-2 accordion-content">
+                <div>
+                  <i
+                    class="fa fa-map-marker fa-4x"
+                    style="color: #fae200"
+                    aria-hidden="true"
+                  ></i>
+
+                  <div class="inner-content">
+                    <p class="title">Visitor’s address</p>
+                  </div>
+                  <div>
+                    <p class="grey sub-title">
+                      Reboot Monkey Netherlands B.V.
+                      <br />
+                      Hessenbergweg 95
+                      <br />
+                      1101 CX Amsterdam
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-transparent text-white">
+        <h2 class="accordion-header bg-transparent" id="headingthree">
+          <button
+            class="accordion-button bg-transparent text-white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsethree"
+            aria-expanded="true"
+            aria-controls="collapsethree"
+          >
+            Denmark
+          </button>
+        </h2>
+        <div
+          id="collapsethree"
+          class="accordion-collapse collapse"
+          aria-labelledby="headingthree"
+          data-bs-parent="#accordion"
+        >
+          <div class="accordion-body">
+            <div class="d-flex flex-row justify-content-between mb-3">
+              <div class="p-2 accordion-content">
+                <i
+                  class="fa fa-clock-o fa-4x"
+                  style="color: #fae200"
+                  aria-hidden="true"
+                ></i>
+                <div class="inner-content">
+                  <p class="title">Business hours</p>
+                  <p class="grey sub-title">8:30 - 17:30 CET Mo/Fri</p>
+                </div>
+                <div>
+                  <p class="title">Public Holidays</p>
+                  <p class="yellow lined sub-title">Dutch public holidays</p>
+                </div>
+              </div>
+              <div class="p-2 accordion-content">
+                <i
+                  class="fa fa-phone fa-4x"
+                  style="color: #fae200"
+                  aria-hidden="true"
+                ></i>
+                <div class="inner-content">
+                  <p class="title">Telephone & fax:</p>
+                  <p class="grey sub-title">T +31222222222</p>
+                  <p class="grey sub-title">F +31222222222</p>
+                </div>
+                <div>
+                  <p class="grey sub-title">
+                    Chamber of Commerce: 301111111
+                    <br />
+                    VAT-number : NL2222222222
+                  </p>
+                </div>
+              </div>
+              <div class="p-2 accordion-content">
+                <div>
+                  <i
+                    class="fa fa-map-marker fa-4x"
+                    style="color: #fae200"
+                    aria-hidden="true"
+                  ></i>
+
+                  <div class="inner-content">
+                    <p class="title">Visitor’s address</p>
+                  </div>
+                  <div>
+                    <p class="grey sub-title">
+                      Reboot Monkey Netherlands B.V.
+                      <br />
+                      Hessenbergweg 95
+                      <br />
+                      1101 CX Amsterdam
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-transparent text-white">
+        <h2 class="accordion-header bg-transparent" id="headingfour">
+          <button
+            class="accordion-button bg-transparent text-white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsefour"
+            aria-expanded="true"
+            aria-controls="collapsefour"
+          >
+            Ireland
+          </button>
+        </h2>
+        <div
+          id="collapsefour"
+          class="accordion-collapse collapse"
+          aria-labelledby="headingfour"
+          data-bs-parent="#accordion"
+        >
+          <div class="accordion-body">
+            <div class="d-flex flex-row justify-content-between mb-3">
+              <div class="p-2 accordion-content">
+                <i
+                  class="fa fa-clock-o fa-4x"
+                  style="color: #fae200"
+                  aria-hidden="true"
+                ></i>
+                <div class="inner-content">
+                  <p class="title">Business hours</p>
+                  <p class="grey sub-title">8:30 - 17:30 CET Mo/Fri</p>
+                </div>
+                <div>
+                  <p class="title">Public Holidays</p>
+                  <p class="yellow lined sub-title">Dutch public holidays</p>
+                </div>
+              </div>
+              <div class="p-2 accordion-content">
+                <i
+                  class="fa fa-phone fa-4x"
+                  style="color: #fae200"
+                  aria-hidden="true"
+                ></i>
+                <div class="inner-content">
+                  <p class="title">Telephone & fax:</p>
+                  <p class="grey sub-title">T +31222222222</p>
+                  <p class="grey sub-title">F +31222222222</p>
+                </div>
+                <div>
+                  <p class="grey sub-title">
+                    Chamber of Commerce: 301111111
+                    <br />
+                    VAT-number : NL2222222222
+                  </p>
+                </div>
+              </div>
+              <div class="p-2 accordion-content">
+                <div>
+                  <i
+                    class="fa fa-map-marker fa-4x"
+                    style="color: #fae200"
+                    aria-hidden="true"
+                  ></i>
+
+                  <div class="inner-content">
+                    <p class="title">Visitor’s address</p>
+                  </div>
+                  <div>
+                    <p class="grey sub-title">
+                      Reboot Monkey Netherlands B.V.
+                      <br />
+                      Hessenbergweg 95
+                      <br />
+                      1101 CX Amsterdam
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-transparent text-white">
+        <h2 class="accordion-header bg-transparent" id="headingfour">
+          <button
+            class="accordion-button bg-transparent text-white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsefour"
+            aria-expanded="true"
+            aria-controls="collapsefour"
+          >
+            Germany
+          </button>
+        </h2>
+        <div
+          id="collapsefour"
+          class="accordion-collapse collapse"
+          aria-labelledby="headingfour"
+          data-bs-parent="#accordion"
+        >
+          <div class="accordion-body">
+            <div class="d-flex flex-row justify-content-between mb-3">
+              <div class="p-2 accordion-content">
+                <i
+                  class="fa fa-clock-o fa-4x"
+                  style="color: #fae200"
+                  aria-hidden="true"
+                ></i>
+                <div class="inner-content">
+                  <p class="title">Business hours</p>
+                  <p class="grey sub-title">8:30 - 17:30 CET Mo/Fri</p>
+                </div>
+                <div>
+                  <p class="title">Public Holidays</p>
+                  <p class="yellow lined sub-title">Dutch public holidays</p>
+                </div>
+              </div>
+              <div class="p-2 accordion-content">
+                <i
+                  class="fa fa-phone fa-4x"
+                  style="color: #fae200"
+                  aria-hidden="true"
+                ></i>
+                <div class="inner-content">
+                  <p class="title">Telephone & fax:</p>
+                  <p class="grey sub-title">T +31222222222</p>
+                  <p class="grey sub-title">F +31222222222</p>
+                </div>
+                <div>
+                  <p class="grey sub-title">
+                    Chamber of Commerce: 301111111
+                    <br />
+                    VAT-number : NL2222222222
+                  </p>
+                </div>
+              </div>
+              <div class="p-2 accordion-content">
+                <div>
+                  <i
+                    class="fa fa-map-marker fa-4x"
+                    style="color: #fae200"
+                    aria-hidden="true"
+                  ></i>
+
+                  <div class="inner-content">
+                    <p class="title">Visitor’s address</p>
+                  </div>
+                  <div>
+                    <p class="grey sub-title">
+                      Reboot Monkey Netherlands B.V.
+                      <br />
+                      Hessenbergweg 95
+                      <br />
+                      1101 CX Amsterdam
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <div class="centered">
+      <p>You Ask , We Answer</p>
+      <h1 class="underlined">Frequently Asked Questions</h1>
+    </div>
+    <div class="accordion accordion-flush bg-transparent my-5" id="accordion">
+      <div class="accordion-item bg-transparent text-white">
+        <h2 class="accordion-header bg-transparent" id="faqHeadingOne">
+          <button
+            class="accordion-button bg-transparent text-white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faqcollapseOne"
+            aria-expanded="true"
+            aria-controls="faqcollapseOne"
+          >
+            What exactly does Reboot Monkey do?
+          </button>
+        </h2>
+        <div
+          id="faqcollapseOne"
+          class="accordion-collapse collapse"
+          aria-labelledby="faqHeadingOne"
+          data-bs-parent="#accordion"
+        >
+          <div class="accordion-body">
+            <div class=" mb-3">
+              <div class="p-2 accordion-content">
+                <p>
+                  Contrary to popular belief, Lorem Ipsum is not simply random
+                  text. It has roots in a piece of classical Latin literature
+                  from 45 BC
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-transparent text-white">
+        <h2 class="accordion-header bg-transparent" id="faqHeadingTwo">
+          <button
+            class="accordion-button bg-transparent text-white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faqcollapseTwo"
+            aria-expanded="true"
+            aria-controls="faqcollapseTwo"
+          >
+            What exactly does Reboot Monkey do?
+          </button>
+        </h2>
+        <div
+          id="faqcollapseTwo"
+          class="accordion-collapse collapse"
+          aria-labelledby="faqHeadingTwo"
+          data-bs-parent="#accordion"
+        >
+          <div class="accordion-body">
+            <div class=" mb-3">
+              <div class="p-2 accordion-content">
+                <p>
+                  Contrary to popular belief, Lorem Ipsum is not simply random
+                  text. It has roots in a piece of classical Latin literature
+                  from 45 BC
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-transparent text-white">
+        <h2 class="accordion-header bg-transparent" id="faqHeadingThree">
+          <button
+            class="accordion-button bg-transparent text-white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faqcollapseThree"
+            aria-expanded="true"
+            aria-controls="faqcollapseThree"
+          >
+            What exactly does Reboot Monkey do?
+          </button>
+        </h2>
+        <div
+          id="faqcollapseThree"
+          class="accordion-collapse collapse"
+          aria-labelledby="faqHeadingThree"
+          data-bs-parent="#accordion"
+        >
+          <div class="accordion-body">
+            <div class=" mb-3">
+              <div class="p-2 accordion-content">
+                <p>
+                  Contrary to popular belief, Lorem Ipsum is not simply random
+                  text. It has roots in a piece of classical Latin literature
+                  from 45 BC
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  <div class="accordion-item bg-transparent text-white">
+        <h2 class="accordion-header bg-transparent" id="faqHeadingFour">
+          <button
+            class="accordion-button bg-transparent text-white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faqcollapseFour"
+            aria-expanded="true"
+            aria-controls="faqcollapseFour"
+          >
+            What exactly does Reboot Monkey do?
+          </button>
+        </h2>
+        <div
+          id="faqcollapseFour"
+          class="accordion-collapse collapse"
+          aria-labelledby="faqHeadingFour"
+          data-bs-parent="#accordion"
+        >
+          <div class="accordion-body">
+            <div class=" mb-3">
+              <div class="p-2 accordion-content">
+                <p>
+                  Contrary to popular belief, Lorem Ipsum is not simply random
+                  text. It has roots in a piece of classical Latin literature
+                  from 45 BC
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  <!-- </div> -->
+</div>
+<div *ngIf="!embeded">
+  <br />
+  <br />
+</div>

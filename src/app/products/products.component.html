@@ -1,0 +1,21 @@
+<!-- <div class="container">
+    <h2>
+        Your (remote) pair of expert hands for any task
+    </h2>
+    <br />
+    <p>
+        At Reboot Monkey, we offer a full range of services. Below you’ll find a brief overview of these services. Of course we can also provide you with customized services. 
+    </p>
+    <div class="filters">
+        <a class="btn-primary" [ngClass]="{'not-active': product.link !== currentProduct }"
+            *ngFor="let product of products; let i = index" [routerLink]="['/products/' + product.link]"
+            routerLinkActive="router-link-active">
+            {{product.title}}
+        </a>
+    </div>
+
+</div> -->
+
+<rm-rack-servers *ngIf="currentProduct === 'rack-servers'"></rm-rack-servers>
+<!-- <rm-ip-transit *ngIf="currentProduct === 'ip-transit'"></rm-ip-transit>
+<rm-sla *ngIf="currentProduct === 'sla'"></rm-sla> -->

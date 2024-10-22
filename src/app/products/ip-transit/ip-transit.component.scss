@@ -1,0 +1,333 @@
+@import "../../../variables.scss";
+
+.yellow-bg {
+    background-color: $primaryColor;
+    padding: 17px 0;
+    padding-bottom: 17px;
+
+    .col-lg-9 {
+        display: flex;
+        align-items: center;
+
+        * {
+            color: #000;
+            font-weight: bold;
+        }
+    }
+}
+
+.header-img {
+    // max-height: 200px;
+    max-width: 340px !important;
+}
+
+.service-text {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.service-cover-text {
+    background: url(../../../assets/ipbg.webp);
+    background-position: center;
+    background-size: cover;
+    padding: 60px 30px;
+    text-align: center;
+
+    * {
+        color: #fff;
+        font-weight: bold;
+    }
+}
+
+.service-list-item p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.service-list-item strong {
+    font-weight: bold;
+    font-size: 20px !important;
+}
+
+.service-list-item:hover {
+    background: #F0DE0033;
+}
+
+.service-list-item img {
+    width: 90px;
+    padding: 11px;
+}
+
+.service-list-item {
+    display: flex;
+    margin: 5px 0;
+    font-size: 16px;
+    border-radius: 10px;
+    background: transparent;
+    transition: background 0.2s ease-in-out;
+    align-items: flex-start;
+    padding: 15px;
+}
+
+.contact {
+    background-color: #F0DE0033;
+    padding: 30px;
+
+    img {
+        max-width: 200px;
+    }
+
+    .row {
+        align-items: flex-end;
+
+        .col-md-9 {
+            padding: 30px 15px;
+        }
+    }
+}
+
+.cloud {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.service {
+    >div {
+        padding: 30px;
+        border-radius: 10px;
+        background: transparent;
+        transition: background 0.2s ease-in-out;
+
+        &:hover {
+            background: #F0DE0033;
+        }
+    }
+
+    h5 {
+        font-weight: bold;
+        font-size: 22px;
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    img {
+        width: 60px;
+        height: auto;
+        overflow-clip-margin: border-box;
+    }
+}
+
+.partner-holder {
+    background: #fff;
+    border-radius: 10px;
+    height: 150px;
+    position: relative;
+    padding: 20px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 15px auto;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+
+    img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+
+// new added CSS
+
+a.btn-primary {
+    font-family: Avenir LT Std;
+}
+
+.service-cover-text p {
+    font-weight: 400;
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-family: Avenir LT Std;
+}
+.btn-set-sec a.btn-primary.outlined {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 750;
+    line-height: normal;
+    display: flex;
+    max-width: 214px;
+    height: 48px;
+    padding: 8px 10px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+@media (min-width: 991px) and (max-width: 4000px) {
+
+    .section-header.row p {
+        font-size: 20px;
+        font-weight: 400 !important;
+        width: 754px;
+    }
+
+    .contact {
+        padding: 44px 0;
+    }
+
+    .service-cover-text p {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 26px 0;
+    }
+
+    .ip-three-box h5 {
+        font-size: 28px !important;
+        font-weight: 750;
+        line-height: normal;
+        padding-bottom: 16px;
+    }
+
+    .ip-three-box p {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .ip-three-box img {
+        width: 122px !important;
+        padding-bottom: 18px;
+    }
+
+    .ip-three-box img.second-box {
+        padding-bottom: 40px !important;
+    }
+
+    .ip-three-box img.third-box {
+        padding-bottom: 42px !important;
+    }
+
+    .yellow-circle-text {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 40px;
+    }
+
+    .yellow-circle {
+        font-size: 20px;
+    }
+
+    .yellow-circle-sec h4 {
+        font-size: 32px;
+        font-weight: 750;
+        line-height: normal;
+    }
+
+    .yellow-circle-sec p {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: normal;
+        margin: 24px 0;
+    }
+
+    .yellow-cloud-imag-sec img {
+        max-width: 417.05px;
+        height: 352.71px;
+    }
+
+    .container-fluid.contact h3 {
+        font-family: Avenir LT Std;
+        font-size: 32px;
+        font-weight: 750;
+        line-height: normal;
+    }
+
+    .container-fluid.contact p {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 28px;
+    }
+    .yellow-cloud-imag-sec {
+        display: grid;
+        align-items: end;
+    }
+    .three-service-row h3 {
+        font-size: 32px;
+        font-weight: 750;
+        line-height: normal;
+    }
+    .three-service-row p {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .service-list-item p {
+        font-size: 20px !important;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .service-list-item {
+        align-items: center;
+        gap: 12px;
+    }
+    .pricetag-text-sec p {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: normal;
+        margin: 37px 0;
+        max-width: 736px;
+    }
+    .pricetag-text-sec h4 {
+        font-size: 32px;
+        font-weight: 750;
+        line-height: normal;
+    }
+    .pricetag-text-sec.btn-set-sec a.btn-primary.outlined {
+        margin-left: 0 !important;
+    }
+
+}
+@media (min-width: 10px) and (max-width: 550px) {
+
+    .yellow-circle-text {
+        font-size: 16px;
+    }
+
+    .container.service-text {
+        padding: 30px 10px;
+    }
+    .cloud {
+        max-width: 200px;
+        margin-left: 0;
+    }
+    .container-fluid.service-cover-text {
+        padding: 30px 10px;
+    }
+    .theme-banner-btn {
+        margin-bottom: 20px;
+    }
+    .yellow-circle-text {
+        margin-bottom: 20px;
+    }
+    .service-list-item {
+        display: block !important;
+    }
+    .btn-set-sec a.btn-primary.outlined {
+        font-size: 16px;
+        max-width: 132px;
+        margin-left: 0;
+        height: 34px;
+        }
+}

@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row center">
+        <div class="col-lg-6">
+            <form (submit)="handleRequest()">
+                <br/>
+                <br/>
+                <h1>
+                    Register
+                </h1>
+                <small>
+                    Register a new <strong>Reboot Monkey</strong> account
+                </small>
+                <br/>
+                <br/>
+                <br/>
+                <input type="text" name="username" [(ngModel)]="acount.username" placeholder="Username" />
+                <input type="text" name="username" [(ngModel)]="acount.full_name" placeholder="Full Name" />
+                <input type="email" name="email" [(ngModel)]="acount.email" placeholder="Email" />
+                <input type="password" name="password" [(ngModel)]="acount.hashed_password" placeholder="Password" />
+                <input type="password" name="confirmPassword" [(ngModel)]="confirmPassword" placeholder="Confirm Password" />
+                <input type="text" name="location" [(ngModel)]="acount.location" placeholder="Location" />
+                <button class="btn-primary outlined">
+                    Register
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

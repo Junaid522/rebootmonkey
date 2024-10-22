@@ -1,0 +1,29 @@
+<!-- <div class="container">
+    <h2>
+        Your (remote) pair of expert hands for any task
+    </h2>
+    <br />
+    <p>
+        At Reboot Monkey, we offer a full range of services. Below you’ll find a brief overview of these services.<br />
+        Of course we can also provide you with customized services.
+    </p>
+    <div class="filters">
+        <a class="btn-primary" [ngClass]="{'not-active': service.link !== currentService }"
+            *ngFor="let service of services; let i = index" [routerLink]="['/services/' + service.link]"
+            routerLinkActive="router-link-active">
+            {{service.title}}
+        </a>
+    </div>
+
+</div> -->
+
+<rm-rack-and-stack *ngIf="currentService === 'rack-and-stack'"></rm-rack-and-stack>
+<rm-hardware-monitoring *ngIf="currentService === 'hardware-monitoring'"></rm-hardware-monitoring>
+<rm-smart-hands *ngIf="currentService === 'smart-hands'"></rm-smart-hands>
+<rm-hardware-recycling *ngIf="currentService === 'hardware-recycling'"></rm-hardware-recycling>
+<rm-rack-and-network *ngIf="currentService === 'rack-and-network'"></rm-rack-and-network>
+<rm-data-destroying *ngIf="currentService === 'data-destroying'"></rm-data-destroying>
+
+<div class="service-details" *ngIf="currentService === 'remote-hands'">
+    <rm-remote-hands></rm-remote-hands>
+</div>

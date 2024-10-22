@@ -1,0 +1,52 @@
+<div class="sticky-header">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" aria-current="page" [routerLink]="['/']">
+                    <img alt="logo" src="../../assets/logo-new.webp" />
+                </a>
+                <button (click)="toggleSidebar()" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <img src="../../assets/menu.webp" alt="side menu" />
+                </button>
+                <div [ngClass]="{collapse}" class="navbar-collapse" id="navbarNavDropdown">
+                    <div class="search-input">
+                        <img alt="search" src="../../assets/navsearch.webp" />
+                        <input placeholder="Search..." type="search" />
+                    </div>
+                    <ul class="navbar-nav">
+                        <li *ngFor="let item of menu" class="nav-item" [ngClass]="{dropdown: item.children}">
+                            <a class="nav-link" [ngClass]="{'dropdown-toggle': item.children}" *ngIf="item.type === 'link'"
+                                aria-current="page" [routerLink]="item.href" [routerLinkActiveOptions]="{exact: true}"
+                                routerLinkActive="active">{{item.title}}</a>
+                            <a class="nav-link" role="button" *ngIf="item.type === 'e-link'" href="{{item.href}}"
+                                target="_blank" data-bs-toggle="dropdown" aria-expanded="false">
+                                {{item.title}}
+                            </a>
+                            <ul class="dropdown-menu" *ngIf="item.children">
+                                <li><a class="dropdown-item" *ngFor="let c of item.children" [routerLink]="c.href"
+                                        [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">{{c.title}}</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- <li>
+                            <a class="btn-primary outlined cart" [routerLink]="[(shoppingCartLength$ | async) ? '/shop/cart' : '/shop']" routerLinkActive="router-link-active" >
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <i class="counter" *ngIf="(shoppingCartLength$ | async)">{{(shoppingCartLength$ | async)}}</i>
+                            </a>
+                        </li>
+                        <li *ngIf="loginState$ | async">
+                            <a style="margin-left: 15px;" class="btn-primary outlined cart" (click)="logout()">
+                                Logout
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="padding-header"></div>
+<rm-side #sideNav [(state)]="sidebarState"></rm-side>

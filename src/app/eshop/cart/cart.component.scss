@@ -1,0 +1,148 @@
+@import "../../../variables.scss";
+::ng-deep .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #fff;
+}
+::ng-deep .ant-tabs-ink-bar {
+    background: $primaryColor;
+}
+::ng-deep .ant-tabs-tab-btn:active {
+    color: $primaryColor;
+}
+::ng-deep .ant-tabs-tab-btn {
+    color: #aaa;
+}
+::ng-deep .ant-tabs-top>.ant-tabs-nav::before {
+    border-color: #aaa;
+}
+::ng-deep nz-tabs-nav.ant-tabs-nav {
+    width: 1140px;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    margin-bottom: 60px !important;
+}
+::ng-deep .ant-tabs-content-holder {
+    padding: 0 70px;
+}
+::ng-deep .ant-tabs-tab.ng-star-inserted.ant-tabs-tab-disabled {
+    opacity: 0.4;
+}
+.btn-primary {
+    margin: 0 2px;
+}
+input {
+    color: #000;
+    width: 60px;
+}
+.holder {
+    background-attachment: fixed;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.items {
+    margin: 10px 0;
+    .item {
+        padding: 20px 10px;
+        border-bottom: 1px solid #aaa;
+        transition: all 0.2s ease-in-out;
+        &:last-child {
+            border-bottom: none;
+        }
+        &:hover {
+            background-color: #222222;
+        }
+        p, small, strong, div {
+            color: #fff;
+        }
+    }
+}
+p {
+    font-size: 12px;
+}
+.summary {
+    border-radius: 10px;
+    background-color: rgba(240, 222, 0, 0.2);
+    padding: 15px;
+    margin-top: 30px;
+}
+.summary-blk {
+    border-radius: 10px;
+    background-color: #434343;
+    padding: 15px;
+    margin-top: 30px;
+}
+.order-btn {
+    font-size: 32px;
+    font-weight: bold;
+}
+.center-payment {
+    display: flex;
+    justify-content: center;
+}
+.account-btns .col-lg-6 .col {
+    background: #434343;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    height: 100%;
+}
+.pay {
+        display: flex;
+        border-radius: 5px;
+        border: none;
+        font-weight: bold;
+        font-size: 24px;
+        color: #fff;
+        padding: 0;
+        overflow: hidden;
+        transition: opacity 0.2s ease-in-out;
+    div {
+        background: #9600ff;
+        padding: 5px 10px;
+        border-right: 1px solid rgba(0,0,0,0.3);
+    }
+    .no-border {
+        border: none;
+        background: darken(#9600ff, 20);
+    }
+    &:hover {
+        opacity: 0.8;
+    }
+}
+form {
+    input, textarea {
+        border: none;
+        border-bottom: 2px solid $primaryColor;
+        color: $primaryColor;
+        background: $black;
+        display: block;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    textarea {
+        border: 1px solid $primaryColor;
+        min-height: 70px;
+    }
+    input {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .input-holder {
+        position: relative;
+        &::before {
+            content: "*";
+            position: absolute;
+            top: 0px;
+            left: 5px;
+            color: $primaryColor;
+        }
+    }
+}
+.success-text {
+    font-size: 60px;
+    font-weight: bold;
+    color: $primaryColor;
+}
+.success-monkeys {
+    max-width: 420px;
+}

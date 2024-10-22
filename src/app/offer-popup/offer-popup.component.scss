@@ -1,0 +1,131 @@
+:host {
+    display: contents;
+  }
+  .div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    min-height: 493px;
+    max-width: 514px;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    padding: 10px 16px 24px;
+  }
+  .img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .img-2 {
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    width: 24px;
+    align-self: end;
+  }
+  .img-3 {
+    aspect-ratio: 2.33;
+    object-fit: auto;
+    object-position: center;
+    width: 150px;
+    max-width: 100%;
+  }
+  .div-2 {
+    position: relative;
+    align-self: stretch;
+    margin-top: 18px;
+    font: 34px Jomhuria, sans-serif;
+  }
+  @media (max-width: 991px) {
+    .div-2 {
+      max-width: 100%;
+    }
+  }
+  .div-3 {
+    position: relative;
+    font: 32px/24px Jomhuria, sans-serif;
+  }
+  .div-4 {
+    position: relative;
+    margin-top: 26px;
+    font: 16px Avenir, sans-serif;
+  }
+  .div-5 {
+    position: relative;
+    margin-top: 4px;
+    font: 750 16px Avenir, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  .div-6 {
+    position: relative;
+    margin-top: 4px;
+    font: 750 16px Avenir, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  .div-7 {
+    position: relative;
+    align-self: stretch;
+    margin-top: 36px;
+    font: 750 20px Avenir, -apple-system, Roboto, Helvetica,
+      sans-serif;
+  }
+  @media (max-width: 991px) {
+    .div-7 {
+      max-width: 100%;
+    }
+  }
+  .div-8 {
+    position: relative;
+    align-self: stretch;
+    margin-top: 8px;
+    font: 52px Jomhuria, sans-serif;
+  }
+  @media (max-width: 991px) {
+    .div-8 {
+      max-width: 100%;
+      font-size: 40px;
+    }
+  }
+  .div-9 {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--primary, #f7e001);
+    margin-top: 8px;
+    width: 283px;
+    max-width: 100%;
+    color: var(--card-color, #171717);
+    padding: 12px 24px;
+    font: 22px Avenir, sans-serif;
+  }
+  @media (max-width: 991px) {
+    .div-9 {
+      padding: 5px 20px;
+    }
+  }
+
+  ::ng-deep .ant-modal-close {
+    svg {
+      color: white;
+    }
+  }
+
+  .header-text {
+    font-weight: 750; 
+    color: rgba(255, 255, 255, 1)
+  }
+
+  .subtext {
+    font-family: serif !important;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1)
+  }

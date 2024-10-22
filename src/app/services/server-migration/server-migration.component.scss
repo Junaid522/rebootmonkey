@@ -1,0 +1,304 @@
+@import "../../../variables.scss";
+
+.yellow-bg {
+    background-color: $primaryColor;
+    padding: 17px 0;
+    padding-bottom: 17px;
+
+    .col-lg-6 {
+        display: flex;
+        // align-items: center;
+
+        * {
+            color: #000;
+            font-weight: bold;
+        }
+    }
+}
+
+.service-text {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.service-cover-text {
+    background: url(../../../assets/dec-cover.webp);
+    background-position: center;
+    background-size: cover;
+    padding: 100px 30px;
+    text-align: center;
+    * {
+        color: #fff;
+        font-weight: bold;
+        font-size: 36px;
+    }
+}
+.service-list-item p {
+    margin: 0;
+}
+
+.service-list-item strong {
+    font-weight: bold;
+    font-size: 28px !important;
+    font-family: Avenir LT Std;
+}
+.service-list-item:hover {
+    background: #F0DE0033;
+}
+.service-list-item img {
+    width: 90px;
+
+}
+.service-list-item {
+    margin: 5px 0;
+    font-size: 16px;
+    border-radius: 10px;
+    background: transparent;
+    transition: background 0.2s ease-in-out;
+    padding: 15px;
+    display: grid;
+    justify-items: center;
+    img {
+        display: flex;
+        width: 82.821px;
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+    * {
+        font-size: 20px;
+    }
+}
+.contact {
+    background-color: #F0DE0033;
+    .row {
+        align-items: center;
+        .col-md-9 {
+            padding: 30px 15px;
+        }
+    }
+}
+@media (min-width: 1060px) {
+.servers-img {
+    width: 492px;
+    height: 328px;
+}
+
+// New Added CSS
+.section-header.row P {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: lighter !IMPORTANT;
+    line-height: normal;
+    width: 671px;
+    margin-bottom: 38px;
+}
+.section-header.row h1 {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 750;
+    line-height: normal;
+    font-family: Avenir LT Std;
+    margin-bottom: 12px;
+}
+.section-header.row .btn-get-quote {
+    padding: 8px 10px;
+    font-size: 26px;
+    width: 215px;
+    height: 52px;
+    display: flex;
+    font-family: Avenir LT Std;
+    justify-content: center;
+    align-items: center;
+}
+.image-sec-alin {
+    justify-content: end;
+}
+p.imag-bottom-text {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 1048px;
+    margin: auto;
+}
+
+.three-box-hover-effect {
+    width: 100%;
+    max-width: 1130px;
+    margin: auto;
+    padding-top: 38px;
+    padding-bottom: 158px;
+}
+.service-list-item p {
+    margin-top: 16px !important;
+}
+.row.service-list button.btn-primary.outlined {
+    display: flex;
+    width: 214px;
+    height: 48px;
+    padding: 8px 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: Avenir LT Std;
+}
+.get-start-btn {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+.half-bg-imag {
+    background: url("../../../assets/backfall.webp");
+    background-repeat: no-repeat;
+    background-size: 856px 1835px;
+    background-position: left;
+}
+
+.container-fluid.contact p {
+    font-size: 24px;
+    font-weight: lighter;
+    line-height: normal;
+    margin-bottom: 61px;
+}
+
+.container-fluid.contact a.btn-primary.outlined {
+    display: flex;
+    width: 214px;
+    height: 48px;
+    padding: 8px 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: Avenir LT Std;
+}
+.imag-set-top-bottom img {
+    margin-bottom: -50px;
+}
+}
+// Partners
+.partners {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .partner-holder {
+    height: 100px;
+    position: relative;
+    padding: 10px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 15px 25px;
+    border-radius: 5px;
+  
+    img {
+      height: auto;
+      width: 100%;
+      filter: grayscale(100%);
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .partner-holder {
+      width: 100px;
+    }
+  
+    .partners {
+      height: 6rem !important;
+    }
+  
+    .resp {
+      max-width: 100% !important;
+    }
+  
+    .counter {
+      margin-bottom: 10px !important;
+      margin-left: unset !important;
+      margin-right: unset !important;
+    }
+  
+    .numbers {
+      display: unset;
+      justify-content: center;
+    }
+  
+    .heading {
+      font-size: 2rem !important;
+    }
+  
+    .provide-para p {
+      font-size: 15px !important;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .partner-holder {
+      display: flex;
+    }
+  
+    .small {
+      max-width: 50%;
+    }
+  }
+  
+  .partners-slider {
+    position: relative;
+    height: 8rem;
+    overflow: hidden;
+  }
+  
+  .partners-slider-track {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: scroll 20s linear infinite;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+  
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .partner {
+    flex: 0 0 15%;
+  }
+  @media (max-width: 1000px){
+    .in-inner-wth{
+        width: auto !important;
+        margin: auto;
+    }
+  }
+  @media (max-width: 1060px){
+  .container-fluid.contact {
+    padding-top: 50px;
+}
+.three-box-hover-effect {
+    margin-bottom: 50px;
+}
+  }
+
+  @media (min-width: 991px) and (max-width: 4000px){
+.header-img {
+  max-height: 350px;
+  width: 550px;
+}
+  }
+  .row.text-center.three-box-hover-effect h3 {
+    font-family: "Avenir LT Std";
+    font-size: 28px;
+    font-weight: 750;
+    line-height: normal;
+}
